@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Stack+Sans+Text:wght@200..700&display=swap');
 :root{
-    --body-text: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, serif;
     --heading-text: "Stack Sans Text", sans-serif;
+    --body-text: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, serif;
     --spacing: 1rem;
 
     --black:#262626;
@@ -20,28 +20,44 @@ body{
     background-color: #F9F4F4;
 }
 
+header{
+    padding-inline: var(--spacing);
+    padding-block-start: var(--spacing);
+    padding-block-end: 3rem;
+}
+
+nav ol{
+    padding: var(--spacing);
+}
+
 header ol:first-child, nav ol{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
     font-family: var(--body-text);
     font-size: 1.15rem;
-    padding: var(--spacing);
 }
 
-h1, h2, h3, p, blockquote{
-    padding-inline: var(--spacing);
+header ol:last-child{
+    padding-block: var(--spacing);
 }
 
 h1{
     font-family: var(--heading-text);
-    font-size: 4rem;
+    font-size: 4.2rem;
     font-weight: 700;
     line-height: 4rem;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-block-start: 3rem;
+    margin-block-end: var(--spacing);
 }
 
 h2{
     font-family: var(--heading-text);
+    color: #e8a7b1;
+    font-size: 2rem;
+    margin-block-end: 2rem;
 }
 
 h3{
@@ -50,18 +66,43 @@ h3{
     font-weight: 600;
     line-height: 2rem;
     padding-block: 0.5rem;
+    padding-inline: var(--spacing);
     position: sticky;
     top: 0%;
     background: var(--red);
-    color: var(--black);
+    color: white;
     z-index: 2;
+    margin-block-start: 6rem;
+    margin-block-end: 3rem;
 }
 
-p, small{
+p{
     font-family: var(--body-text);
     font-size: 1.15rem;
     line-height: 1.9rem;
     padding-block: var(--spacing);
+}
+
+main p{
+    padding-inline: var(--spacing);
+}
+
+header small{
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    font-weight: 600;
+    color: #e8a7b1;
+    display: inline-block;
+    margin-block-start: 4rem;
+}
+
+header ol p{
+    color: var(--red);
+    font-weight: 800;
+    font-family: var(--heading-text);
+    padding-block: 0.2rem;
+
 }
 
 blockquote {
@@ -69,6 +110,7 @@ blockquote {
     margin-inline-start: 3rem;
     margin-block: 4rem;
     padding-inline-start: 2.5rem;
+    padding-inline-end: var(--spacing);
     color: var(--black);
     z-index: 1;
     font-family: var(--heading-text);

@@ -1,4 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Stack+Sans+Text:wght@200..700&display=swap');
+:root{
+    --heading-text: "Stack Sans Text", sans-serif;
+    --body-text: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, serif;
+    --spacing: 1rem;
+
+    --black:#262626;
+    /* --red:#FF5858; */
+    --red: #ED433E;
+    --orange:#FFAB71;
+    --yellow:#FFFF8A;
+    --pink: #F6C3CB;
+}
+
+html{scroll-behavior: smooth;}
+
+/* ------------ layout ------------- */
+
 body{
-    font-family:'Comic Sans MS', cursive;
-    background-color: greenyellow;
+    background-color: #F9F4F4;
+}
+
+header ol:first-child, nav ol{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+    padding: var(--spacing);
+}
+
+h1, h2, h3, p, blockquote{
+    padding-inline: var(--spacing);
+}
+
+h1{
+    font-family: var(--heading-text);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+h2{
+    font-family: var(--heading-text);
+}
+
+h3{
+    font-family: var(--heading-text);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2rem;
+    padding-block: 0.5rem;
+    position: sticky;
+    top: 0%;
+    background: var(--red);
+    color: var(--black);
+    z-index: 2;
+}
+
+p, small{
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    padding-block: var(--spacing);
+}
+
+blockquote {
+    position: relative;
+    margin-inline-start: 3rem;
+    margin-block: 4rem;
+    padding-inline-start: 2.5rem;
+    color: var(--black);
+    z-index: 1;
+    font-family: var(--heading-text);
+    font-size: 1.4rem;
+}
+
+blockquote p {
+    margin: 0;
+    padding: 0;
+    padding-block: 2rem;
+    font-family: var(--heading-text);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+blockquote::before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    font-family: var(--heading-text);
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--red);
+}
+
+a {
+    color:black;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.15em;
+    transition: color 0.3s ease-in-out;
+}
+
+section{
+    margin-block: 6rem;
 }

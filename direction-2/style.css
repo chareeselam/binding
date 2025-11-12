@@ -1,10 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=TikTok+Sans:opsz,wght@12..36,300..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
 :root{
-    --pink: #DACDDE;
+    --heading-text: "Tiktok Sans", sans-serif;
+    --body-text: "Figtree", system-ui, -apple-system, BlinkMacSystemFont, serif;
+
+    --spacing: 1rem;
+
+    --pink: #f9d8e3;
     --orange:#EB7B3B;
     --peach: #F0E3D8;
 }
-    
+
+html{scroll-behavior: smooth;}
+
+/* ------------ layout ------------- */
+
 body{
-    font-family:'Comic Sans MS', cursive;
-    background-color: var(--peach);
+    background-color: #F9F4F4;
+}
+
+header{
+    background: var(--pink);
+}
+header ol:first-child, nav ol{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+    padding: var(--spacing);
+}
+
+h1, h2, h3, p, small, blockquote{
+    padding-inline: var(--spacing);
+}
+
+h1{
+    font-family: var(--heading-text);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--orange);
+    color: var(--peach);
+    padding-block: 0.5rem;
+}
+
+h2{
+    font-family: var(--heading-text);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    padding-block: 2.6rem;
+    color: var(--orange);
+}
+
+h3{
+    font-family: var(--heading-text);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    padding-block: 0.5rem;
+    background: var(--red);
+    color: var(--black);
+    z-index: 2;
+}
+
+p, small{
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    padding-block: var(--spacing);
+}
+
+.bold{
+    font-family: var(--body-text);
+    font-size: 1.15rem;
+    line-height: 1.9rem;
+    font-weight: 600;
+}
+
+.date-author{
+    display: flex;
+    flex-direction: column;
+    padding: none;
+}
+
+blockquote {
+    position: relative;
+    margin-inline-start: 1rem;
+    margin-block: 4rem;
+    padding-inline-start: 2.5rem;
+    color: var(--black);
+    z-index: 1;
+    font-family: var(--heading-text);
+    font-size: 1.4rem;
+}
+
+blockquote p {
+    margin: 0;
+    padding: 0;
+    padding-block: 2rem;
+    font-family: var(--heading-text);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+blockquote::before {
+    content: "“";
+    position: absolute;
+    left: 2%;
+    top: 0;
+    font-family: var(--heading-text);
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--orange);
+}
+
+body a {
+    color:black;
+    text-decoration-color: #f6c6d6;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.15em;
+    transition: color 0.3s ease-in-out;
+}
+
+section{
+    margin-block: 6rem;
+}
+
+/* ------------ nav ------------- */
+.site-nav {
+    padding: var(--spacing);
+    background: var(--peach);
+}
+
+.site-nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.site-nav a,
+.has-submenu summary {
+    font-family: var(--heading-text);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.site-nav a:hover { text-decoration: underline; }
+
+/* ------------ dropdown ------------- */
+.has-submenu details {
+    position: relative;
+}
+
+.has-submenu summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.has-submenu summary::-webkit-details-marker { display: none; }
+
+.has-submenu summary::after {
+    content: "▾";
+    margin-inline-start: .35rem;
+    font-size: 1em;
+}
+
+.submenu {
+  position: absolute;
+  left: -1rem;
+  top: 100%;
+  transform: translateY(.5rem);
+  list-style: none;
+  margin: 0;
+  padding-inline: .5rem;
+  padding-block: 0.5rem;
+  min-width: max(16rem, 24ch);
+  background: var(--peach);
+  display: none;
+  z-index: 10;
+}
+
+.has-submenu details[open] .submenu { 
+    display: block; 
+}
+
+/* Full-row clickable items with background that wraps */
+.submenu li a {
+    display: block;
+    padding: .6rem 1rem;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background: var(--orange);
+  color: black;
+  text-decoration: none;
+}
+
+/* Hover/focus open for pointer devices too */
+@media (hover: hover) and (pointer: fine) {
+    .has-submenu:hover details[open] .submenu { display: block; }
+    .has-submenu:hover details:not([open]) .submenu { display: block; }
 }
