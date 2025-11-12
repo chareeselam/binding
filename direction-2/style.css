@@ -1,4 +1,10 @@
+:root{
+    --pink: #DACDDE;
+    --orange:#EB7B3B;
+    --peach: #F0E3D8;
+}
+    
 body{
     font-family:'Comic Sans MS', cursive;
-    background-color: gray;
+    background-color: var(--peach);
 }
