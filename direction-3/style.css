@@ -50,11 +50,11 @@ h3{
     font-weight: 600;
     line-height: 2rem;
     padding-block: 0.5rem;
-    position: sticky;
-    top: 0%;
-    background: var(--red);
+    border-style: solid;
+    border-color: var(--red);
     color: var(--black);
     z-index: 2;
+    display: inline-block;
 }
 
 p, small{

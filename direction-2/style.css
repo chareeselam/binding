@@ -6,7 +6,7 @@
 
     --spacing: 1rem;
 
-    --pink: #f9d8e3;
+    --pink: #f6c6d6;
     --orange:#EB7B3B;
     --peach: #F0E3D8;
 }
@@ -121,7 +121,7 @@ blockquote::before {
 
 body a {
     color:black;
-    text-decoration-color: #f6c6d6;
+    text-decoration-color: var(--pink);
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-thickness: 0.15em;
