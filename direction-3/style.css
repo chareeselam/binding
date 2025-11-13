@@ -23,7 +23,7 @@ body{
     padding-block: 2rem;
 }
 
-header ol:first-child, nav ol{
+/* .top-nav, nav ol{
     display: flex;
     flex-direction:row;
     justify-content: start;
@@ -34,6 +34,26 @@ header ol:first-child, nav ol{
     border-width: 1.5px;
     padding-block-end: var(--spacing);
     border-color: var(--blue);
+} */
+
+.top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.1rem;
+    border-bottom: 1.5px solid var(--blue);
+    padding-bottom: var(--spacing);
+    font-family: var(--body-text);
+    color: var(--blue);
+}
+
+.left-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-title{
+    padding-block: 0.25rem;
 }
 
 header ol:last-child{

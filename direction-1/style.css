@@ -107,6 +107,7 @@ header ol p{
 
 blockquote {
     position: relative;
+    display: block;
     margin-inline-start: 3rem;
     margin-block: 4rem;
     padding-inline-start: 2.5rem;
@@ -150,4 +151,24 @@ a {
 
 section{
     margin-block: 6rem;
+}
+
+.arrow,
+.nav-title{
+    font-family: var(--heading-text);
+    font-size: 1.5rem;
+    align-items: start;
+}
+
+.arrow a{
+    text-decoration: none;
+}
+
+.highlight{
+    padding-inline: 0.2rem;
+    background-color: var(--pink);
+}
+
+.italicize {
+    font-style: italic;
 }
