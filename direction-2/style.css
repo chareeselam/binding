@@ -2,7 +2,7 @@
 
 :root{
     --heading-text: "Tiktok Sans", sans-serif;
-    --body-text: "Figtree", system-ui, -apple-system, BlinkMacSystemFont, serif;
+    --body-text: "Figtree", system-ui, serif;
 
     --spacing: 1rem;
 

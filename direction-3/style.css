@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Stack+Sans+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 :root{
-    --heading-text: "Stack Sans Text", sans-serif;
-    --body-text: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, serif;
+    --heading-text: "Montserrat", sans-serif;
+    --body-text: "Victor Mono", system-ui, sans-serif;
     --spacing: 1rem;
 
-    --black:#262626;
-    /* --red:#FF5858; */
+    /* --red:#FF5858;
     --red: #ED433E;
     --orange:#FFAB71;
     --yellow:#FFFF8A;
-    --pink: #F6C3CB;
+    --pink: #F6C3CB; */
+    --blue:#00274E;
 }
 
 html{scroll-behavior: smooth;}
@@ -18,50 +19,69 @@ html{scroll-behavior: smooth;}
 
 body{
     background-color: #F9F4F4;
+    padding-inline: var(--spacing);
+    padding-block: 2rem;
 }
 
 header ol:first-child, nav ol{
     display: flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: start;
+    gap: 2rem;
     font-family: var(--body-text);
-    font-size: 1.15rem;
-    padding: var(--spacing);
+    font-size: var(--spacing);
+    border-bottom: solid;
+    border-width: 1.5px;
+    padding-block-end: var(--spacing);
+    border-color: var(--blue);
 }
 
-h1, h2, h3, p, blockquote{
-    padding-inline: var(--spacing);
+header ol:last-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header{
+    margin-block-end: 12rem;
 }
 
 h1{
     font-family: var(--heading-text);
-    font-size: 4rem;
+    font-size: 3.1rem;
     font-weight: 700;
-    line-height: 4rem;
+    line-height: 3rem;
+    padding-block-start: 2rem;
+    color: var(--blue);
+    text-transform: uppercase;
 }
 
 h2{
     font-family: var(--heading-text);
+    font-size: 1.8rem;
+    color: var(--blue);
+    margin-block-end: 3rem;
 }
 
 h3{
     font-family: var(--heading-text);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 2rem;
-    padding-block: 0.5rem;
-    border-style: solid;
-    border-color: var(--red);
-    color: var(--black);
+    padding: 1rem;
+    margin-block: 2rem;
+    color: white;
     z-index: 2;
     display: inline-block;
+    background-color: var(--blue);
 }
 
 p, small{
     font-family: var(--body-text);
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.9rem;
-    padding-block: var(--spacing);
+    padding-block: 1.5rem;
+    color: var(--blue);
 }
 
 blockquote {
@@ -73,6 +93,9 @@ blockquote {
     z-index: 1;
     font-family: var(--heading-text);
     font-size: 1.4rem;
+    border-bottom: solid;
+    border-width: 0.2rem;
+    border-color: var(--blue);
 }
 
 blockquote p {
@@ -84,7 +107,7 @@ blockquote p {
     line-height: 2.5rem;
 }
 
-blockquote::before {
+/* blockquote::before {
     content: "“";
     position: absolute;
     left: 0;
@@ -94,18 +117,121 @@ blockquote::before {
     font-size: 4rem;
     line-height: 1;
     color: var(--red);
-}
+} */
 
 a {
-    color:black;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-color: var(--red);
-    text-decoration-thickness: 0.1em;
-    text-underline-offset: 0.15em;
-    transition: color 0.3s ease-in-out;
+    color:var(--blue);
 }
 
 section{
     margin-block: 6rem;
+}
+
+.lines{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--spacing);
+    margin-block: 2rem;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1.5px
+}
+
+.lines, .lines p,
+.temperature p{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    text-align: center;
+}
+
+.ch-no{
+    padding: 1rem;
+    border-style: solid;
+    border-color: var(--blue);
+    border-width: 1.5px;
+    font-weight: 600;
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: var(--spacing);
+}
+
+.temperature{
+    font-weight: 600;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--spacing);
+    text-align: center;
+}
+
+/* ------------ grid ------------- */
+.tilted-grid,
+.tilted-grid .cell,
+.tilted-grid .inner,
+.two-cells,
+.cell,
+.inner-rect {
+        border-width: 1.5px;
+    border-style: solid;
+    color: var(--blue);
+}
+
+.tilted-grid,
+.two-cells{
+    width: 320px;
+    display: grid;
+    margin-inline: auto;
+    margin-block: 3rem;
+}
+
+/* ------------ grid 1 ------------- */
+.tilted-grid {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.tilted-grid .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tilted-grid .inner {
+    width: 35%;
+    aspect-ratio: 1 / 1;
+}
+
+.tilted-grid::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: -9%;
+    width: 125%;
+    height: 2px;
+    background: var(--blue);
+    transform: rotate(-20deg);
+    transform-origin: left center;
+}
+
+/* ------------ grid 2 ------------- */
+
+.two-cells {
+    height: 240px;
+    aspect-ratio: 2 / 1;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.inner-rect {
+  width: 12%;
+  aspect-ratio: 1 / 2;
 }

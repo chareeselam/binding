@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Stack+Sans+Text:wght@200..700&display=swap');
 :root{
     --heading-text: "Stack Sans Text", sans-serif;
-    --body-text: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, serif;
+    --body-text: "Nunito", system-ui, serif;
     --spacing: 1rem;
 
     --black:#262626;
