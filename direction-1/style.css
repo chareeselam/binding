@@ -139,13 +139,13 @@ blockquote::before {
     color: var(--red);
 }
 
-a {
-    color:black;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-color: var(--red);
-    text-decoration-thickness: 0.1em;
-    text-underline-offset: 0.15em;
+body a {
+    color: black;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--pink);
+    text-decoration-thickness: 0.2em;
+    text-underline-offset: 0.25em;
     transition: color 0.3s ease-in-out;
 }
 
