@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face{
+  font-family: 'Hanson-Bold';
+  src: url('type-fonts/Hanson-Bold.ttf') format('truetype');
+}
 
 :root{
-    --heading-text: "Orbitron", sans-serif;
+    --heading-text: 'Orbitron', sans-serif;
     --body-text: "Roboto", system-ui, sans-serif;
+    --blockquote-text: 'Space Mono';
 
     --spacing: 1rem;
 
-    --pink: #5aa43a;
+    --green: #8ac65c;
     --orange:#e66465;
     --glass: rgba(236, 236, 236, 0.359);
 }
@@ -15,18 +22,8 @@ html{scroll-behavior: smooth;}
 
 /* ------------ layout ------------- */
 
+body{background: black;}
 
-body{
-    background: radial-gradient(#8ac65c, #e8f4c8);
-}
-
-/* main{
-    background-color: var(--glass);
-} */
-
-/* header{
-    background: var(--pink);
-} */
 header ol:first-child, nav ol{
     display: flex;
     flex-direction:row;
@@ -42,25 +39,22 @@ h1, h2, h3, p, small, blockquote{
 
 h1{
     font-family: var(--heading-text);
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 3.2rem;
+    font-weight: 600;
     line-height: 2.6rem;
-    padding-block: 2.6rem;
-    /* color: var(--orange); */
-    /* background: linear-gradient(#e66465, #9198e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; */
+    padding-block-start:4rem;
+    padding-block-end: 2.6rem;
+    text-wrap: wrap;
     text-transform: uppercase;
     background: linear-gradient(
         90deg,
+        #e8f4c8,
         #c8e695,
         #8ac65c,
         #5aa43a,
-        #457D2D,
-        #5aa43a,
         #8ac65c,
-        #c8e695
+        #c8e695,
+        #e8f4c8
     );
 
     background-size: 300% 100%;
@@ -80,26 +74,23 @@ h1{
 
 h2{
     font-family: var(--heading-text);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    line-height: 2.4rem;
+    line-height: 2.8rem;
     text-align: start;
     justify-content: center;
-    /* background-color: var(--orange); */
-    color: linear-gradient(#e66465, #9198e5);
+    color: white;
     padding-block: 0.5rem;
-    /* text-transform: uppercase; */
 }
 
 h3{
     font-family: var(--heading-text);
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 2.4rem;
     padding-block: 0.5rem;
     background: var(--red);
-    color: var(--black);
-    z-index: 2;
+    color: white;
 }
 
 p, small{
@@ -124,22 +115,22 @@ p, small{
 
 blockquote {
     position: relative;
-    margin-inline-start: 1rem;
     margin-block: 4rem;
     padding: 2.5rem;
+    padding-inline-end: 1rem;
     z-index: 1;
-    font-family: var(--heading-text);
+    font-family: var(--body-text);
+    line-height: 2rem;
     font-size: 1.4rem;
-    /* background-color: var(--glass); */
 }
 
 blockquote p {
     margin: 0;
-    padding: 0;
-    padding-block: 2rem;
-    font-family: var(--heading-text);
-    font-size: 1.8rem;
-    line-height: 2.5rem;
+    padding-block-start: 2rem;
+    padding-block-end: 4rem;
+    font-family: var(--blockquote-text);
+    font-size: 1.7rem;
+    line-height: 2.2rem;
     font-weight: 500;
 }
 
@@ -148,32 +139,33 @@ blockquote::before {
     position: relative;
     left: -1%;
     top: 0;
-    font-family: var(--heading-text);
+    font-family: var(--blockquote-text);
     font-weight: 800;
     font-size: 3rem;
     line-height: 1;
-    color: var(--orange);
+    color: var(--green);
 }
 
 body a {
-    color: black;
     text-decoration-line: underline;
     text-decoration-style: wavy;
-    text-decoration-color: var(--pink);
+    text-decoration-color: var(--green);
     text-decoration-thickness: 0.12em;
     text-underline-offset: 0.15em;
     transition: color 0.3s ease-in-out;
 }
 
+h3,
+p,
+small,
+body a,
 blockquote,
 blockquote a{
     color: white;
 }
 
 section{
-    margin-block: 6rem;
-    padding-block: 2rem;
-    background-color: var(--glass);
+    padding-block: 1.4rem;
 }
 
 section:has(blockquote) {
@@ -195,14 +187,18 @@ section:has(blockquote) {
 
 .site-nav a,
 .has-submenu summary {
-    font-family: var(--heading-text);
+    font-family: var(--body-text);
     font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
-    color: black;
+    color: white;
+    background-color: black;
 }
 
-.site-nav a:hover { text-decoration: underline; }
+.site-nav a:hover { 
+    text-decoration: underline;
+    text-decoration-color: var(--green); 
+}
 
 /* ------------ dropdown ------------- */
 .has-submenu details {
@@ -240,7 +236,6 @@ section:has(blockquote) {
     display: block; 
 }
 
-/* Full-row clickable items with background that wraps */
 .submenu li a {
     display: block;
     padding: .6rem 1rem;
@@ -249,12 +244,53 @@ section:has(blockquote) {
 
 .submenu li a:hover {
   background: var(--orange);
-  color: black;
+  color: var(--green);
   text-decoration: none;
 }
 
-/* Hover/focus open for pointer devices too */
 @media (hover: hover) and (pointer: fine) {
     .has-submenu:hover details[open] .submenu { display: block; }
     .has-submenu:hover details:not([open]) .submenu { display: block; }
+}
+
+.highlight{
+    display: inline;
+    background-color: #8ac65c;
+    padding-inline: 0.1rem;
+    color: black;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* ------------ slide ------------- */
+
+.sliding-container {
+    width: calc(100% + 300px);
+    border-top: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    padding-block: 0.4rem;
+    margin-inline: -1rem;
+    margin-block-start: 6rem;
+    margin-block-end: 0;
+    white-space: nowrap;
+    position: relative;
+    transform: rotate(12deg);
+    overflow: hidden; /* THIS is crucial */
+}
+
+.sliding-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide-rtl 18s linear infinite;
+    font-family: var(--heading-text);
+    font-size: 1.2rem;
+}
+
+.sliding-text::after {
+    content: " Vaporwave, neon lighting, Bisexual lighting, illusion of dimension, Cyberpunk •";
+}
+
+@keyframes slide-rtl {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
