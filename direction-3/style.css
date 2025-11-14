@@ -11,6 +11,7 @@
     --yellow:#FFFF8A;
     --pink: #F6C3CB; */
     --blue:#00274E;
+    --background: #F9F4F4;
 }
 
 html{scroll-behavior: smooth;}
@@ -18,7 +19,7 @@ html{scroll-behavior: smooth;}
 /* ------------ layout ------------- */
 
 body{
-    background-color: #F9F4F4;
+    background-color: var(--background);
     padding-inline: var(--spacing);
     padding-block: 2rem;
 }
@@ -99,6 +100,7 @@ h3{
 p, small{
     font-family: var(--body-text);
     font-size: 1rem;
+    font-weight: 400;
     line-height: 1.9rem;
     padding-block: 1.5rem;
     color: var(--blue);
@@ -191,10 +193,12 @@ section{
 .tilted-grid .inner,
 .two-cells,
 .cell,
-.inner-rect {
-        border-width: 1.5px;
+.inner-rect,
+.diamond,
+.diamond.big {
+    border-width: 1.5px;
     border-style: solid;
-    color: var(--blue);
+    border-color: var(--blue);
 }
 
 .tilted-grid,
@@ -254,4 +258,106 @@ section{
 .inner-rect {
   width: 12%;
   aspect-ratio: 1 / 2;
+}
+
+.terms{
+    font-weight: 700;
+}
+
+.terms::before{
+    content: "{";
+}
+
+.terms::after{
+    content: "}";
+}
+
+/* ------------ diamond ------------- */
+.diamond,
+.diamond.big {
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 1 / 1; 
+    transform: rotate(45deg);
+}
+
+.diamond-diagram,
+.diamond-diagram-2 {
+    position: relative;
+    width: 320px;
+    height: 180px;
+    margin-inline: auto;
+    margin-block: 3rem;
+}
+/* ------------ diamond 1------------- */
+.diamond-left {
+    left: 20px;
+    top: 40px;
+}
+
+.diamond-right {
+    left: 110px;
+    top: 40px;
+    background: var(--background);
+    z-index: 12;
+}
+
+.diamond span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    transform: rotate(-45deg);
+    font-family: var(--body-text);
+    font-size: 0.9rem;
+}
+
+.arrow {
+    position: absolute;
+    top: 49%;
+    left: 200px;
+    width: 115px;
+    height: 1.5px;
+    background: var(--blue);
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 70%;
+    width: 8px;
+    height: 8px;
+    border-top: 1.5px solid var(--blue);
+    border-right: 1.5px solid var(--blue);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* ------------ diamond 2------------- */
+.diamond.left {
+    left: 20px;
+    top: 25px;
+}
+
+.diamond.right {
+    left: 200px;
+    top: 25px;
+}
+
+.diamond-inner {
+    position: absolute;
+    width: 55%;
+    aspect-ratio: 1 / 1;
+    border-inline-start: 1px dashed var(--blue);
+    border-block-end: 1px dashed var(--blue);
+    right: 0%;
+    top: 0%;
+}
+
+.label {
+    position: absolute;
+    font-family: var(--body-text);
+    font-size: 0.8rem;
+    transform: rotate(-45deg);
 }
