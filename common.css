@@ -29,7 +29,7 @@ h1{
     font-family: var(--heading-text);
     font-size: 3.1rem;
     font-weight: 700;
-    line-height: 3rem;
+    line-height: 3.2rem;
     padding-block-start: 2rem;
     color: var(--blue);
     text-transform: uppercase;
@@ -79,6 +79,13 @@ p, small{
     color: var(--blue);
 }
 
+#navigation a{
+    text-decoration: none;
+}
+
+#navigation a:hover{
+    text-decoration: underline;
+}
 .left-links {
     display: flex;
     gap: 2rem;
@@ -146,8 +153,6 @@ a:hover{
     color: green;
 }
 
-blockquote .terms{font-weight:600;}
-
 /* ------------ blockquote ------------- */
 
 blockquote {
@@ -155,7 +160,7 @@ blockquote {
     margin-inline-start: 3rem;
     margin-block: 4rem;
     padding-inline-start: 2.5rem;
-    color: var(--black);
+    color: var(--blue);
     z-index: 1;
     font-family: var(--body-text);
     font-size: 1rem;
@@ -182,23 +187,9 @@ blockquote::before {
     color: var(--blue);
 }
 
+blockquote .terms{font-weight:600;}
+
 /* ------------ section headings ------------- */
-
-.lines {
-    padding: var(--spacing);
-    margin-block: 2rem;
-    border-top: 1.5px solid var(--blue);
-    border-bottom: 1.5px solid var(--blue);
-    text-align: center;
-}
-
-.lines, .lines p,
-.temperature p{
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2.4rem;
-    text-align: center;
-}
 
 .ch-no{
     padding: 1rem;
@@ -209,6 +200,21 @@ blockquote::before {
     font-size: 2rem;
     display: inline-block;
     margin-bottom: var(--spacing);
+}
+
+.lines {
+    padding: var(--spacing);
+    margin-block: 2rem;
+    border-top: 1.5px solid var(--blue);
+    border-bottom: 1.5px solid var(--blue);
+    text-align: center;
+}
+
+.lines, .lines p{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    text-align: center;
 }
 
 /* ------------ text treatments ------------- */
