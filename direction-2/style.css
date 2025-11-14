@@ -7,8 +7,9 @@
     --spacing: 1rem;
 
     --pink: #f6c6d6;
-    --orange:#EB7B3B;
+    --orange:#e66465;
     --peach: #F0E3D8;
+    --glass: rgba(236, 236, 236, 0.359);
 }
 
 html{scroll-behavior: smooth;}
@@ -16,12 +17,16 @@ html{scroll-behavior: smooth;}
 /* ------------ layout ------------- */
 
 body{
-    background-color: #F9F4F4;
+    background: radial-gradient(#e66465, #9198e5);
 }
 
-header{
-    background: var(--pink);
+main{
+    background-color: var(--glass);
 }
+
+/* header{
+    background: var(--pink);
+} */
 header ol:first-child, nav ol{
     display: flex;
     flex-direction:row;
@@ -35,26 +40,57 @@ h1, h2, h3, p, small, blockquote{
     padding-inline: var(--spacing);
 }
 
-h1{
+h2{
     font-family: var(--heading-text);
-    font-size: 3.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    line-height: 3rem;
-    text-align: center;
+    line-height: 2.4rem;
+    text-align: start;
     justify-content: center;
-    background-color: var(--orange);
-    color: var(--peach);
+    /* background-color: var(--orange); */
+    color: linear-gradient(#e66465, #9198e5);
     padding-block: 0.5rem;
+    /* text-transform: uppercase; */
 }
 
-h2{
+h1{
     font-family: var(--heading-text);
     font-size: 4rem;
     font-weight: 700;
     line-height: 2.6rem;
     padding-block: 2.6rem;
-    color: var(--orange);
+    /* color: var(--orange); */
+    /* background: linear-gradient(#e66465, #9198e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    text-transform: uppercase;
+    background: linear-gradient(
+        90deg,
+        #e8f4c8,
+        #c8e695,
+        #8ac65c,
+        #5aa43a,
+        #8ac65c,
+        #c8e695,
+        #e8f4c8 
+    );
+
+    background-size: 300% 100%;
+    background-position: 0% 0%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: slide 4s linear infinite;
 }
+
+@keyframes slide {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+}
+
 
 h3{
     font-family: var(--heading-text);
@@ -91,11 +127,12 @@ blockquote {
     position: relative;
     margin-inline-start: 1rem;
     margin-block: 4rem;
-    padding-inline-start: 2.5rem;
-    color: var(--black);
+    padding: 2.5rem;
+    color: white;
     z-index: 1;
     font-family: var(--heading-text);
     font-size: 1.4rem;
+    /* background-color: var(--glass); */
 }
 
 blockquote p {
@@ -105,12 +142,13 @@ blockquote p {
     font-family: var(--heading-text);
     font-size: 1.8rem;
     line-height: 2.5rem;
+    font-weight: 500;
 }
 
 blockquote::before {
     content: "“";
-    position: absolute;
-    left: 2%;
+    position: relative;
+    left: -1%;
     top: 0;
     font-family: var(--heading-text);
     font-weight: 800;
@@ -124,25 +162,28 @@ body a {
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-color: var(--pink);
-    text-decoration-thickness: 0.15em;
+    text-decoration-thickness: 0.12em;
     text-underline-offset: 0.15em;
     transition: color 0.3s ease-in-out;
 }
 
+blockquote a{color: white;}
+
 section{
     margin-block: 6rem;
+    padding-block: 2rem;
+    /* background-color: var(--glass); */
 }
 
 /* ------------ nav ------------- */
 .site-nav {
-    padding: var(--spacing);
-    background: var(--peach);
+    padding-block: var(--spacing);
 }
 
 .site-nav .menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 2rem;
     list-style: none;
 }
@@ -151,7 +192,7 @@ section{
 .has-submenu summary {
     font-family: var(--heading-text);
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     color: black;
 }

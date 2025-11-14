@@ -114,7 +114,7 @@ blockquote {
     color: var(--black);
     z-index: 1;
     font-family: var(--heading-text);
-    font-size: 1.4rem;
+    font-size: 1rem;
     border-bottom: solid;
     border-width: 0.2rem;
     border-color: var(--blue);
