@@ -1,197 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-:root{
-    --heading-text: "Montserrat", sans-serif;
-    --body-text: "Victor Mono", system-ui, sans-serif;
-    --spacing: 1rem;
-
-    /* --red:#FF5858;
-    --red: #ED433E;
-    --orange:#FFAB71;
-    --yellow:#FFFF8A;
-    --pink: #F6C3CB; */
-    --blue:#00274E;
-    --background: #F9F4F4;
-}
-
-html{scroll-behavior: smooth;}
-
-/* ------------ layout ------------- */
-
-body{
-    background-color: var(--background);
-    padding-inline: var(--spacing);
-    padding-block: 2rem;
-}
-
-/* .top-nav, nav ol{
-    display: flex;
-    flex-direction:row;
-    justify-content: start;
-    gap: 2rem;
-    font-family: var(--body-text);
-    font-size: var(--spacing);
-    border-bottom: solid;
-    border-width: 1.5px;
-    padding-block-end: var(--spacing);
-    border-color: var(--blue);
-} */
-
-.top-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 0.1rem;
-    border-bottom: 1.5px solid var(--blue);
-    padding-bottom: var(--spacing);
-    font-family: var(--body-text);
-    color: var(--blue);
-}
-
-.left-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-title{
-    padding-block: 0.25rem;
-}
-
-header ol:last-child{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-header{
-    margin-block-end: 12rem;
-}
-
-h1{
-    font-family: var(--heading-text);
-    font-size: 3.1rem;
-    font-weight: 700;
-    line-height: 3rem;
-    padding-block-start: 2rem;
-    color: var(--blue);
-    text-transform: uppercase;
-}
-
-h2{
-    font-family: var(--heading-text);
-    font-size: 1.8rem;
-    color: var(--blue);
-    margin-block-end: 3rem;
-}
-
-h3{
-    font-family: var(--heading-text);
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 2rem;
-    padding: 1rem;
-    margin-block: 2rem;
-    color: white;
-    z-index: 2;
-    display: inline-block;
-    background-color: var(--blue);
-}
-
-p, small{
-    font-family: var(--body-text);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.9rem;
-    padding-block: 1.5rem;
-    color: var(--blue);
-}
-
-blockquote {
-    position: relative;
-    margin-inline-start: 3rem;
-    margin-block: 4rem;
-    padding-inline-start: 2.5rem;
-    color: var(--black);
-    z-index: 1;
-    font-family: var(--heading-text);
-    font-size: 1rem;
-    border-bottom: solid;
-    border-width: 0.2rem;
-    border-color: var(--blue);
-}
-
-blockquote p {
-    margin: 0;
-    padding: 0;
-    padding-block: 2rem;
-    font-family: var(--heading-text);
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-}
-
-blockquote::before {
-    content: "“";
-    position: absolute;
-    left: 0;
-    top: 10%;
-    font-family: var(--heading-text);
-    font-weight: 800;
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--red);
-}
-
-a {
-    color:var(--blue);
-}
-
-section{
-    margin-block: 6rem;
-}
-
-/* .lines{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: var(--spacing);
-    margin-block: 2rem;
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 1.5px;
-} */
-
-.lines {
-    padding: var(--spacing);
-    margin-block: 2rem;
-    border-top: 1.5px solid var(--blue);
-    border-bottom: 1.5px solid var(--blue);
-    text-align: center;
-}
-
 .multi-temperature{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.lines, .lines p,
 .temperature p{
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2.4rem;
     text-align: center;
-}
-
-.ch-no,
-.key{
-    padding: 1rem;
-    border-style: solid;
-    border-color: var(--blue);
-    border-width: 1.5px;
-    font-weight: 600;
-    font-size: 2rem;
-    display: inline-block;
-    margin-bottom: var(--spacing);
 }
 
 .temperature{
@@ -275,18 +92,6 @@ section{
   aspect-ratio: 1 / 2;
 }
 
-.terms{
-    font-weight: 700;
-    /* display: inline-block; */
-}
-
-.terms::before{
-    content: "{";
-}
-
-.terms::after{
-    content: "}";
-}
 
 /* ------------ diamond ------------- */
 .diamond,
