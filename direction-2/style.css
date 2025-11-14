@@ -219,17 +219,17 @@ section:has(blockquote) {
 }
 
 .submenu {
-  position: absolute;
-  left: -1rem;
-  top: 100%;
-  transform: translateY(.5rem);
-  list-style: none;
-  margin: 0;
-  padding-inline: .5rem;
-  padding-block: 0.5rem;
-  min-width: max(16rem, 24ch);
-  display: none;
-  z-index: 10;
+    position: absolute;
+    left: -1rem;
+    top: 100%;
+    transform: translateY(.5rem);
+    list-style: none;
+    margin: 0;
+    padding-inline: .5rem;
+    padding-block: 0.5rem;
+    min-width: max(16rem, 24ch);
+    display: none;
+    z-index: 10;
 }
 
 .has-submenu details[open] .submenu { 
@@ -243,9 +243,9 @@ section:has(blockquote) {
 }
 
 .submenu li a:hover {
-  background: var(--orange);
-  color: var(--green);
-  text-decoration: none;
+    background: var(--orange);
+    color: var(--green);
+    text-decoration: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -286,8 +286,9 @@ section:has(blockquote) {
     font-size: 1.2rem;
 }
 
+/* I wanted to make my sliding text an infinite loop but couldn't quite figure it out. I thought about repeating the text in class="sliding-text" but knew that it would be wrong semantically. Decided to make a duplicate of the text in CSS instead to create the infinite animation. */
 .sliding-text::after {
-    content: " Vaporwave, neon lighting, Bisexual lighting, illusion of dimension, Cyberpunk •";
+    content: "vaporwave ✦ neon lighting ✦ bisexual lighting ✦ illusion of dimension ✦ cyberpunk ✦ vaporwave ✦ neon lighting ✦ bisexual lighting ✦ illusion of dimension ✦ cyberpunk ✦";
 }
 
 @keyframes slide-rtl {
