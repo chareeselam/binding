@@ -327,35 +327,30 @@ section:has(blockquote) {
 }
 
 .sunset {
-  margin-inline: auto;
-  margin-block: 2rem;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-
-  /* same colors you had before, in a radial gradient */
-  background: radial-gradient(circle at top,
-      #FB918F 0%,    /* pink */
+    margin-inline: auto;
+    margin-block: 2rem;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top,
+      #FB918F 0%,
       #FBA58B 25%,
       #FFD497 50%,
       #FDF29A 75%,
-      #FFF9C9 100%   /* light yellow */
+      #FFF9C9 100%
   );
 
-  /* make the gradient taller so it has room to "move" */
-  background-size: 100% 200%;
-  background-position: 50% 0%;
 
-  /* smooth up–down movement */
-  animation: sunset-shift 8s ease-in-out infinite alternate;
+    background-size: 100% 200%;
+    background-position: 50% 0%;
+    animation: sunset-shift 8s ease-in-out infinite alternate;
 }
 
-/* animate the colors moving downward */
 @keyframes sunset-shift {
-  0% {
-    background-position: 50% 0%;    /* pink more at the top */
-  }
-  100% {
-    background-position: 50% 100%;  /* pink slides down, light rises */
-  }
+    0% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 50% 100%;
+    }
 }
