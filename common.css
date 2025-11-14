@@ -1,3 +1,38 @@
 :root{
 
 }
+
+blockquote {
+    position: relative;
+    margin-inline-start: 3rem;
+    margin-block: 4rem;
+    padding-inline-start: 2.5rem;
+    color: var(--black);
+    z-index: 1;
+    font-family: var(--heading-text);
+    font-size: 1rem;
+    border-bottom: solid;
+    border-width: 0.2rem;
+    border-color: var(--blue);
+}
+
+blockquote p {
+    margin: 0;
+    padding: 0;
+    padding-block: 2rem;
+    font-family: var(--heading-text);
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+}
+
+blockquote::before {
+    content: "“";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    font-family: var(--heading-text);
+    font-weight: 800;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--red);
+}

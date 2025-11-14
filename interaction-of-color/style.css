@@ -106,9 +106,6 @@ p, small{
     color: var(--blue);
 }
 
-.key{
-    
-}
 blockquote {
     position: relative;
     margin-inline-start: 3rem;
@@ -132,7 +129,7 @@ blockquote p {
     line-height: 2.5rem;
 }
 
-/* blockquote::before {
+blockquote::before {
     content: "“";
     position: absolute;
     left: 0;
@@ -142,7 +139,7 @@ blockquote p {
     font-size: 4rem;
     line-height: 1;
     color: var(--red);
-} */
+}
 
 a {
     color:var(--blue);
