@@ -243,8 +243,8 @@ section:has(blockquote) {
 }
 
 .submenu li a:hover {
-    background: var(--orange);
-    color: var(--green);
+    background: var(--green);
+    color: black;
     text-decoration: none;
 }
 
@@ -268,6 +268,8 @@ section:has(blockquote) {
     width: 100%;
     margin-block-start: 6rem;
     margin-block-end: 1rem;
+    overflow: clip;
+    transform: rotate(12deg);
 }
 
 .sliding-container {
@@ -278,7 +280,7 @@ section:has(blockquote) {
     padding-block: 0.4rem;
     white-space: nowrap;
     position: relative;
-    transform: rotate(12deg);
+    /* transform: rotate(12deg); */
     overflow: visible;
 }
 
@@ -293,11 +295,67 @@ section:has(blockquote) {
 }
 
 /* I wanted to make my sliding text an infinite loop but couldn't quite figure it out. I thought about repeating the text in class="sliding-text" but knew that it would be wrong semantically. Decided to make a duplicate of the text in CSS instead to create the infinite animation. */
-.sliding-text::after {
+/* .sliding-text::after {
     content: "vaporwave ✦ neon lighting ✦ bisexual lighting ✦ illusion of dimension ✦ cyberpunk ✦ vaporwave ✦ neon lighting ✦ bisexual lighting ✦ illusion of dimension ✦ cyberpunk ✦";
-}
+} */
 
 @keyframes slide-rtl {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+.gradient{
+    margin: var(--spacing);
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+        90deg,
+        #e8f4c8,
+        #c8e695,
+        #8ac65c,
+        #5aa43a,
+        #8ac65c,
+        #c8e695,
+        #e8f4c8
+    );
+
+    background-size: 300% 100%;
+    background-position: 0% 0%;
+    color: transparent;
+
+    animation: slide 8s linear infinite;
+}
+
+.sunset {
+  margin-inline: auto;
+  margin-block: 2rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+
+  /* same colors you had before, in a radial gradient */
+  background: radial-gradient(circle at top,
+      #FB918F 0%,    /* pink */
+      #FBA58B 25%,
+      #FFD497 50%,
+      #FDF29A 75%,
+      #FFF9C9 100%   /* light yellow */
+  );
+
+  /* make the gradient taller so it has room to "move" */
+  background-size: 100% 200%;
+  background-position: 50% 0%;
+
+  /* smooth up–down movement */
+  animation: sunset-shift 8s ease-in-out infinite alternate;
+}
+
+/* animate the colors moving downward */
+@keyframes sunset-shift {
+  0% {
+    background-position: 50% 0%;    /* pink more at the top */
+  }
+  100% {
+    background-position: 50% 100%;  /* pink slides down, light rises */
+  }
 }
