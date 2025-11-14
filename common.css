@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-:root{
+:root {
     --heading-text: "Montserrat", sans-serif;
     --body-text: "Victor Mono", system-ui, sans-serif;
     --spacing: 1rem;
@@ -9,23 +9,21 @@
     --background: #F9F4F4;
 }
 
-html{scroll-behavior: smooth;}
+html {scroll-behavior: smooth;}
 
 /* ------------ layout ------------- */
 
-body{
+body {
     background-color: var(--background);
     padding-inline: var(--spacing);
     padding-block: 2rem;
 }
 
-section{
-    margin-block: 6rem;
-}
+section {margin-block: 6rem;}
 
 /* ------------ text ------------- */
 
-h1{
+h1 {
     font-family: var(--heading-text);
     font-size: 3.1rem;
     font-weight: 700;
@@ -35,14 +33,14 @@ h1{
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     font-family: var(--heading-text);
     font-size: 1.8rem;
     color: var(--blue);
     margin-block-end: 3rem;
 }
 
-h3{
+h3 {
     font-family: var(--heading-text);
     font-size: 1.4rem;
     font-weight: 600;
@@ -55,7 +53,7 @@ h3{
     background-color: var(--blue);
 }
 
-p, small{
+p, small {
     font-family: var(--body-text);
     font-size: 1rem;
     font-weight: 400;
@@ -64,7 +62,7 @@ p, small{
     color: var(--blue);
 }
 
-.italicize{font-style: italic;}
+.italicize {font-style: italic;}
 
 /* ------------ navigation ------------- */
 
@@ -79,11 +77,11 @@ p, small{
     color: var(--blue);
 }
 
-#navigation a{
+#navigation a {
     text-decoration: none;
 }
 
-#navigation a:hover{
+#navigation a:hover {
     text-decoration: underline;
 }
 .left-links {
@@ -108,13 +106,11 @@ p, small{
     .has-submenu:hover details:not([open]) .submenu { display: block; }
 } */
 
-.nav-title{
-    padding-block: 0.25rem;
-}
+.nav-title {padding-block: 0.25rem;}
 
 /* ------------ header ------------- */
 
-.long-header{
+.long-header {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto auto;
@@ -127,19 +123,19 @@ p, small{
 .author { grid-area: two; }
 .date { grid-area: three; }
 
-.short-header{
+.short-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-header ol p{padding-block: 0.2rem;}
+header ol p {padding-block: 0.2rem;}
 
-header{margin-block-end: 12rem;}
+header {margin-block-end: 12rem;}
 
 /* ------------ links ------------- */
 
-a{
+a {
     display: inline-block;
     color: var(--blue);
     text-decoration: underline;
@@ -149,7 +145,7 @@ a{
     transition: color 0.3s ease-in-out;
 }
 
-a:hover{
+a:hover {
     color: green;
 }
 
@@ -191,7 +187,7 @@ blockquote .terms{font-weight:600;}
 
 /* ------------ section headings ------------- */
 
-.ch-no{
+.ch-no {
     padding: 1rem;
     border-style: solid;
     border-color: var(--blue);
@@ -210,7 +206,7 @@ blockquote .terms{font-weight:600;}
     text-align: center;
 }
 
-.lines, .lines p{
+.lines, .lines p {
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2.4rem;
@@ -219,13 +215,13 @@ blockquote .terms{font-weight:600;}
 
 /* ------------ text treatments ------------- */
 
-.terms{font-weight: 700;}
+.terms {font-weight: 700;}
 
-.terms::before{
+.terms::before {
     content: "{";
 }
 
-.terms::after{
+.terms::afte {
     content: "}";
 }
 
