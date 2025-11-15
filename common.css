@@ -17,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--background);
-    padding: var(--spacing);
+    /* padding: var(--spacing); */
     min-height: 100dvh;
 }
 
@@ -39,6 +39,7 @@ header {
     min-height: 100svh;
     display: flex;
     flex-direction: column;
+    padding: var(--spacing);
 }
 
 @media (min-width: 750px) {
