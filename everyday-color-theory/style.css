@@ -1,6 +1,6 @@
 /* ------------ header ------------- */
 
-header ol:last-child{
+.short-header{
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto auto;
@@ -10,7 +10,7 @@ header ol:last-child{
     /* gap: 1rem; */
 }
 
-header ol p{
+.short-header p{
     padding-block: 0.2rem;
 }
 

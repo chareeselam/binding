@@ -185,6 +185,14 @@ section{
     text-align: center;
 }
 
+.temperature{
+    font-weight: 600;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--spacing);
+    text-align: center;
+}
+
 .ch-no,
 .key{
     padding: 1rem;
@@ -195,14 +203,6 @@ section{
     font-size: 2rem;
     display: inline-block;
     margin-bottom: var(--spacing);
-}
-
-.temperature{
-    font-weight: 600;
-    font-size: 2rem;
-    display: block;
-    margin-bottom: var(--spacing);
-    text-align: center;
 }
 
 /* ------------ grid ------------- */

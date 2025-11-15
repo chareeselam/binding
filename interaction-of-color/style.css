@@ -1,11 +1,18 @@
-.multi-temperature {
+.multi-temperature{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.multi-temperature p,
-.temperature {
+.lines, .lines p,
+.temperature p{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    text-align: center;
+}
+
+.temperature{
     font-weight: 600;
     font-size: 2rem;
     display: block;

@@ -28,7 +28,7 @@ h1 {
     font-size: 3.1rem;
     font-weight: 700;
     line-height: 3.2rem;
-    padding-block-start: 2rem;
+    padding-block: 2rem;
     color: var(--blue);
     text-transform: uppercase;
 }
@@ -66,7 +66,7 @@ p, small {
 
 /* ------------ navigation ------------- */
 
-#navigation {
+#nav {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -77,39 +77,27 @@ p, small {
     color: var(--blue);
 }
 
-#navigation a {
+#nav a {
     text-decoration: none;
 }
 
-#navigation a:hover {
+#nav a:hover {
     text-decoration: underline;
 }
-.left-links {
+
+#nav-links {
     display: flex;
     gap: 2rem;
 }
-
-/* .left-links li a {
-    display: inline;
-    white-space: nowrap;
-}
-
-.left-links li a:hover {
-    color: var(--blue);
-    text-decoration: underline;
-    text-decoration-color: var(--blue);
-    text-decoration-thickness: 0.1rem;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .has-submenu:hover details[open] .submenu { display: block; }
-    .has-submenu:hover details:not([open]) .submenu { display: block; }
-} */
 
 .nav-title {padding-block: 0.25rem;}
 
 /* ------------ header ------------- */
 
+.longer-header,
+.short-header{
+    margin-block: 2rem;
+}
 .long-header {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -129,9 +117,7 @@ p, small {
     justify-content: space-between;
 }
 
-header ol p {padding-block: 0.2rem;}
-
-header {margin-block-end: 12rem;}
+header ul p {padding-block: 0.2rem;}
 
 /* ------------ links ------------- */
 
@@ -183,8 +169,6 @@ blockquote::before {
     color: var(--blue);
 }
 
-blockquote .terms{font-weight:600;}
-
 /* ------------ section headings ------------- */
 
 .ch-no {
@@ -221,9 +205,16 @@ blockquote .terms{font-weight:600;}
     content: "{";
 }
 
-.terms::afte {
+.terms::after {
     content: "}";
 }
+
+blockquote .terms,
+blockquote .lines{
+    font-weight:700;
+}
+
+
 
 
 /* a {

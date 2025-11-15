@@ -1,0 +1,19 @@
+/* ------------ header ------------- */
+
+.short-header{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "one one"
+    "two three";
+    /* gap: 1rem; */
+}
+
+.short-header p{
+    padding-block: 0.2rem;
+}
+
+.subtitle { grid-area: one; }
+.author { grid-area: two; }
+.date { grid-area: three; }
