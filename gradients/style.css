@@ -1,5 +1,6 @@
 :root {
     --yellow: #F9C823;
+    --dark-yellow: ##6b5b25;
 }
 
 /* ------------ header ------------- */
@@ -14,7 +15,7 @@
     /* gap: 1rem; */
 }
 
-.short-header p{
+.short-header p {
     padding-block: 0.2rem;
 }
 
@@ -24,6 +25,6 @@
 
 
 .title-sig {
-    color: #6b5b25;
-    -webkit-text-stroke-color:var(--yellow);
+    color: var(--dark-yellow);
+    -webkit-text-stroke-color: var(--yellow);
 }

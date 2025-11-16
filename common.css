@@ -5,8 +5,7 @@
     --body-text: "Victor Mono", system-ui, sans-serif;
     --spacing: 1rem;
 
-    /* --blue:#00274E; */
-    --blue: #FFFFFF;
+    --white: #FFFFFF;
     --background: #212121;
     --red: #FC506E;
     --orange: #FB8C49;
@@ -21,7 +20,6 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--background);
-    /* padding: var(--spacing); */
     min-height: 100dvh;
 }
 
@@ -54,14 +52,14 @@ h1 {
     font-weight: 700;
     line-height: 3.2rem;
     padding-block: 2rem;
-    color: var(--blue);
+    color: var(--white);
     text-transform: uppercase;
 }
 
 h2 {
     font-family: var(--heading-text);
     font-size: 1.8rem;
-    color: var(--blue);
+    color: var(--white);
     margin-block-end: 3rem;
 }
 
@@ -75,7 +73,7 @@ h3 {
     color: white;
     z-index: 2;
     display: inline-block;
-    background-color: var(--blue);
+    background-color: var(--white);
 }
 
 p, small {
@@ -84,7 +82,7 @@ p, small {
     font-weight: 400;
     line-height: 1.9rem;
     padding-block: 1.5rem;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .italicize {font-style: italic;}
@@ -96,10 +94,10 @@ p, small {
     flex-direction: column;
     align-items: start;
     gap: 1rem;
-    border-bottom: 1.5px solid var(--blue);
+    border-bottom: 1.5px solid var(--white);
     padding-bottom: var(--spacing);
     font-family: var(--body-text);
-    color: var(--blue);
+    color: var(--white);
 }
 
 #nav-links {
@@ -155,7 +153,7 @@ p, small {
 .intro ul p {padding-block: 0.2rem;}
 
 #footer {
-    border-top: 1.5px solid var(--blue);
+    border-top: 1.5px solid var(--white);
     padding-block-start: var(--spacing);
 }
 
@@ -163,9 +161,9 @@ p, small {
 
 a {
     display: inline-block;
-    color: var(--blue);
+    color: var(--white);
     text-decoration: underline;
-    text-decoration-color: var(--blue);
+    text-decoration-color: var(--white);
     text-decoration-thickness: 0.12em;
     text-underline-offset: 0.15em;
     transition: color 0.3s ease-in-out;
@@ -182,7 +180,7 @@ blockquote {
     margin-inline-start: 3rem;
     margin-block: 4rem;
     padding-inline-start: 2.5rem;
-    color: var(--blue);
+    color: var(--white);
     z-index: 1;
     font-family: var(--body-text);
     font-size: 1rem;
@@ -206,7 +204,7 @@ blockquote::before {
     font-weight: 800;
     font-size: 3rem;
     line-height: 1;
-    color: var(--blue);
+    color: var(--white);
 }
 
 /* ------------ section headings ------------- */
@@ -214,7 +212,7 @@ blockquote::before {
 .ch-no {
     padding: 1rem;
     border-style: solid;
-    border-color: var(--blue);
+    border-color: var(--white);
     border-width: 1.5px;
     font-family: var(--body-text);
     font-kerning: none;
@@ -227,8 +225,8 @@ blockquote::before {
 .lines {
     padding: var(--spacing);
     margin-block: 2rem;
-    border-top: 1.5px solid var(--blue);
-    border-bottom: 1.5px solid var(--blue);
+    border-top: 1.5px solid var(--white);
+    border-bottom: 1.5px solid var(--white);
     text-align: center;
 }
 
@@ -266,7 +264,7 @@ blockquote .lines{
 
 /* a {
     display: inline-block;
-    color: var(--blue);
+    color: var(--white);
     text-decoration: none;
     background-image: linear-gradient(#c8e695, #c8e695);
     background-size: 100% 0.5em;

@@ -1,22 +1,23 @@
 :root {
     --orange: #FB8C49;
+    --dark-orange: #7d4b2c;
 }
 
-.multi-temperature{
+.multi-temperature {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .lines, .lines p,
-.temperature p{
+.temperature p {
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2.4rem;
     text-align: center;
 }
 
-.temperature{
+.temperature {
     font-weight: 600;
     font-size: 2rem;
     display: block;
@@ -196,6 +197,6 @@
 
 
 .title-sig {
-    color: #7d4b2c;
+    color: var(--dark-orange);
     -webkit-text-stroke-color: var(--orange);
 }
