@@ -7,9 +7,15 @@
 
     --white: #FFFFFF;
     --background: #212121;
-    --red: #FC506E;
+    /* --red: #FC506E;
     --orange: #FB8C49;
+    --yellow: #F9C823; */
+    --red: #FC506E;
+    --dark-red: #6f303a;
+    --orange: #FB8C49;
+    --dark-orange: #7d4b2c;
     --yellow: #F9C823;
+    --dark-yellow: #6b5b25;
 }
 
 html {scroll-behavior: smooth;}
@@ -52,9 +58,9 @@ header {
 
 h1 {
     font-family: var(--heading-text);
-    font-size: 3.1rem;
+    font-size: 2.9rem;
     font-weight: 700;
-    line-height: 3.2rem;
+    line-height: 3.5rem;
     padding-block: 2rem;
     color: var(--white);
     text-transform: uppercase;
@@ -146,13 +152,9 @@ p, small {
         background-color: var(--white);
     } */
 
-.longer-subtitle,
-.short-subtitle{
-    margin-block: 2rem;
-}
-
-.long-subtitle {
+.meta {
     display: grid;
+    margin-block: 2rem;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -166,11 +168,6 @@ p, small {
     grid-area: one;
     max-width: 80vw; }
 
-.short-subtitle {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
 .intro ul p {padding-block: 0.2rem;}
 
@@ -242,7 +239,8 @@ blockquote::before {
 
 .lines {
     padding: var(--spacing);
-    margin-block: 2rem;
+    margin-block: 3rem;
+    padding-block: 2rem;
     border-top: 1.5px solid var(--white);
     border-bottom: 1.5px solid var(--white);
     text-align: center;
@@ -318,6 +316,57 @@ a:hover {
     }
 } */
 
+/* ------------ interaction demo ------------- */
+
+.interaction-demo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+
+  margin-inline: auto;
+  margin-block: auto;
+  align-self: center;
+}
+
+.square {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 0.7;
+}
+
+.red {
+  background: var(--dark-red);
+  border: 3px solid var(--red);
+  top: 10px;
+  left: 10px;
+
+  animation: move-red 3s ease-in-out forwards;
+}
+
+.yellow {
+  background: var(--dark-yellow);
+  border: 3px solid var(--yellow);
+  bottom: 0px;
+  right: 10px;
+
+  animation: move-yellow 3s ease-in-out forwards;
+}
+
+@keyframes move-red {
+  to {
+    transform: translate(60px, 60px);
+  }
+}
+
+@keyframes move-yellow {
+  to {
+    transform: translate(-60px, -60px);
+  }
+}
+
+
 /* ------------ media queries ------------- */
 
 @media (min-width: 750px) {
@@ -335,7 +384,13 @@ a:hover {
             "footer footer";
     }
 
-    #nav     { grid-area: nav; }
+    #nav { 
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .intro   { grid-area: intro; }
     .content { 
         grid-area: content;
@@ -345,7 +400,7 @@ a:hover {
 
     .intro {
         position: relative;
-        padding-inline-end: var(--spacing);
+        padding-inline-end: 2rem;
     }
 
     .intro::after {

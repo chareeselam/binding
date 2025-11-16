@@ -3,25 +3,25 @@
     --dark-orange: #7d4b2c;
 }
 
+.ch-no {
+    border-color: var(--orange);
+    background-color: var(--dark-orange);
+    color: var(--orange);
+}
+
 .multi-temperature {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.lines, .lines p,
-.temperature p {
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2.4rem;
-    text-align: center;
-}
-
-.temperature {
+.temperature,
+.multi-temperature p {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
     display: block;
-    margin-bottom: var(--spacing);
     text-align: center;
 }
 
