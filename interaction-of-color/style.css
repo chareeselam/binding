@@ -200,3 +200,7 @@
     color: var(--dark-orange);
     -webkit-text-stroke-color: var(--orange);
 }
+
+a:hover {
+    color: var(--orange);
+}

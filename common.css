@@ -122,7 +122,18 @@ p, small {
     padding-block: var(--spacing);
     /* background-color: #212121; */
     flex: 1 0 auto;
+    /* position: relative; */
 }
+
+/* .intro::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 1.5px; 
+        background-color: var(--white);
+    } */
 
 .longer-subtitle,
 .short-subtitle{
@@ -167,10 +178,6 @@ a {
     text-decoration-thickness: 0.12em;
     text-underline-offset: 0.15em;
     transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: green;
 }
 
 /* ------------ blockquote ------------- */
@@ -321,4 +328,19 @@ a:hover {
         overflow: auto;
     }
     #footer  {grid-area: footer;}
+
+    .intro {
+        position: relative;
+    }
+
+    .intro::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1.5px; 
+        background-color: var(--white);
+    }
 }
+

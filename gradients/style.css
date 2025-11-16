@@ -28,3 +28,7 @@
     color: var(--dark-yellow);
     -webkit-text-stroke-color: var(--yellow);
 }
+
+a:hover {
+    color: var(--yellow);
+}
