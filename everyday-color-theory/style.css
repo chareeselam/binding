@@ -36,3 +36,5 @@ a:hover {
 blockquote::before {
     color: var(--red);
 }
+
+.terms {color: var(--red);}

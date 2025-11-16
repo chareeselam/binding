@@ -3,6 +3,8 @@
     --dark-orange: #7d4b2c;
 }
 
+.terms {color: var(--orange);}
+
 .ch-no {
     border-color: var(--orange);
     background-color: var(--dark-orange);
