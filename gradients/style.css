@@ -1,3 +1,7 @@
+:root {
+    --yellow: #F9C823;
+}
+
 /* ------------ header ------------- */
 
 .short-header{
@@ -17,3 +21,9 @@
 .subtitle { grid-area: one; }
 .author { grid-area: two; }
 .date { grid-area: three; }
+
+
+.title-sig {
+    color: #6b5b25;
+    -webkit-text-stroke-color:var(--yellow);
+}

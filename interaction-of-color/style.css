@@ -1,3 +1,7 @@
+:root {
+    --orange: #FB8C49;
+}
+
 .multi-temperature{
     display: flex;
     flex-direction: row;
@@ -188,4 +192,10 @@
     font-family: var(--body-text);
     font-size: 0.8rem;
     transform: rotate(-45deg);
+}
+
+
+.title-sig {
+    color: #7d4b2c;
+    -webkit-text-stroke-color: var(--orange);
 }
