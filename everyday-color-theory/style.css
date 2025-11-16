@@ -32,3 +32,7 @@
 a:hover {
     color: var(--red);
 }
+
+blockquote::before {
+    color: var(--red);
+}
