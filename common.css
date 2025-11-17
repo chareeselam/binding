@@ -336,6 +336,13 @@ blockquote .lines{
   float: center;
 }
 
+/* ------------ image ------------- */
+
+img {
+	display: block;
+	inline-size: 100%;
+}
+
 /* ------------ media queries ------------- */
 
 @media (min-width: 750px) {
