@@ -1,6 +1,24 @@
 :root {
     --red: #FC506E;
-    --dark-red: #6f303a;
+    --dark-red: #6f303A;
+   --color: #c5465b;
+}
+
+.terms,
+.ch-no,
+a:hover,
+blockquote::before {
+    color: var(--red);
+}
+
+a,
+a:hover {
+    text-decoration-color: var(--dark-red);
+}
+
+.ch-no {
+    border-color: var(--red);
+    background-color: var(--dark-red);
 }
 
 /* ------------ header ------------- */
@@ -28,13 +46,3 @@
     color: var(--dark-red);
     -webkit-text-stroke-color: var(--red);
 }
-
-a:hover {
-    color: var(--red);
-}
-
-blockquote::before {
-    color: var(--red);
-}
-
-.terms {color: var(--red);}

@@ -3,12 +3,16 @@
     --dark-orange: #7d4b2c;
 }
 
-.terms {color: var(--orange);}
+.terms,
+.ch-no,
+a:hover,
+blockquote::before {
+    color: var(--orange);
+}
 
 .ch-no {
     border-color: var(--orange);
     background-color: var(--dark-orange);
-    color: var(--orange);
 }
 
 .multi-temperature {
@@ -26,6 +30,7 @@
     display: block;
     text-align: center;
 }
+
 
 /* ------------ grid ------------- */
 
@@ -198,14 +203,9 @@
     color: var(--orange);
 }
 
-
 .title-sig {
     color: var(--dark-orange);
     -webkit-text-stroke-color: var(--orange);
-}
-
-a:hover {
-    color: var(--orange);
 }
 
 #nav-links a .interaction{
@@ -218,8 +218,4 @@ a:hover {
     border-radius: 20px;
     border-style: solid;
     border-width: 1.5px;
-}
-
-blockquote::before {
-    color: var(--orange);
 }

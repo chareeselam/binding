@@ -3,6 +3,23 @@
     --dark-yellow: #6b5b25;
 }
 
+.terms,
+.ch-no,
+a:hover,
+blockquote::before {
+    color: var(--yellow);
+}
+
+a,
+a:hover {
+    text-decoration-color: var(--dark-yellow);
+}
+
+.ch-no {
+    border-color: var(--yellow);
+    background-color: var(--dark-yellow);
+}
+
 /* ------------ header ------------- */
 
 .short-header{
@@ -28,13 +45,3 @@
     color: var(--dark-yellow);
     -webkit-text-stroke-color: var(--yellow);
 }
-
-a:hover {
-    color: var(--yellow);
-}
-
-blockquote::before {
-    color: var(--yellow);
-}
-
-.terms {color: var(--yellow);}
