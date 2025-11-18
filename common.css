@@ -16,7 +16,7 @@
     --dark-orange: #7d4b2c;
     --yellow: #F9C823;
     --dark-yellow: #6b5b25;
-    --green: #2E933C;
+    --green: #3B82F6;
     --dark-green: #17381b;
 }
 
@@ -103,6 +103,7 @@ p, small {
 
 .italicize {font-style: italic;}
 
+
 /* ------------ navigation ------------- */
 
 #nav {
@@ -121,7 +122,8 @@ p, small {
     gap: 2rem;
 }
 
-#nav-links a{
+
+/* #nav-links a {
     height: 40px; 
     display: inline-flex;
     align-items: center;
@@ -129,7 +131,7 @@ p, small {
     cursor: pointer;
     font-size: 0.75rem;
     text-decoration: none;
-}
+} */
 
 .nav-title {
     font-size: 1.4rem;
@@ -140,6 +142,18 @@ p.nav-title {
     padding-block-start: var(--spacing);
     padding-block-end: 0.2rem;
 }
+
+/* #nav-links-home li a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1.5rem;
+    padding-block: 3rem;
+    border: 1.5px solid var(--white);
+    text-decoration: none;
+    color: var(--white);
+    box-sizing: border-box;
+} */
 
 /* ------------ intro ------------- */
 
@@ -162,6 +176,16 @@ p.nav-title {
     grid-template-areas:
     "two three"
     "one one";
+}
+
+.meta-home {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.meta-home h2 {
+    margin:0;
 }
 
 .author { grid-area: two; }
@@ -286,11 +310,6 @@ blockquote .lines{
 
 .bold {
     font-weight: 700;
-}
-
-.experience {
-    color: var(--dark-green);
-    -webkit-text-stroke-color: var(--green);
 }
 
 .highlight {

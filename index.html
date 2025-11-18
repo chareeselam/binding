@@ -6,46 +6,60 @@
         <style>
             @import 'reset.css' layer(reset);
             @import 'common.css' layer(common);
+            @import 'home.css' layer(page);
         </style>
     </head>
     <body>
         <div class="layout-home">
-            <nav id="nav">
-                        <ol id="nav-links">
-                            <li><a href="../index.html">Home</a></li>
-                            <li>
-                                <a href="./everyday-color-theory/index.html">Perception</a>
-                            </li>
-                            <li>
-                                <a href="./interaction-of-color/index.html">Interaction</a>
-                            </li>
-                            <li><a href="./gradients/index.html">Transition</a></li>
-                        </ol>
-                        <p class="nav-title">Color as Experience</p>
-                    </nav>
+            
             <h1>Color as <span class="title-sig experience">Experience</span></h1>
+            
+            <nav id="nav-home">
+                <ol id="nav-links-home">
+                    <li>
+                        <a class="article-card perception-card" href="./everyday-color-theory/index.html">
+                            <div class="interaction">
+                                <img class="penrose-triangle" src="../image/penrose-triangle.png" alt="Penrose Triangle">
+                            </div>
+                            <div class="meta-home">
+                                <h2>Everyday <span class="title-sig color-theory">Color Theory</span></h2>
+                                <p class="terms">Perception</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="article-card interaction-card" href="./interaction-of-color/index.html">
+                            <div class="interaction">
+                                <div class="square red"></div>
+                                <div class="square yellow"></div>
+                            </div>
+                            <div class="meta-home">
+                                <h2><span class="title-sig interaction-of-color">Interaction</span> of Color</h2>
+                                <p class="terms">Interaction</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="article-card transition-card" href="./gradients/index.html">
+                            <!-- <div class="interaction">
+                                <div class="square red"></div>
+                                <div class="square yellow"></div>
+                            </div> -->
+                            <div class="meta-home">
+                                <h2><span class="title-sig gradients">Gradients</span></h2>
+                                <p class="terms">Transition</p>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+            
             
             <section>
                 <h2>Colophon</h2>
                 <p>aiusdfkjndsaf</p>
-                <ul>
-                    <li>
-                        <!-- <div class="interaction">
-                            <img class="penrose-triangle" src="../image/penrose-triangle.png" alt="Penrose Triangle">
-                        </div> -->
-                        <h1>Everyday Color Theory</h1>
-                    </li>
-                    <li>
-                        <!-- <div class="interaction">
-                            <div class="square red"></div>
-                            <div class="square yellow"></div>
-                        </div> -->
-                        <h1>Interaction of Color</h1>
-                    </li>
-                    <li>
-                        <h1>Gradients</h1>
-                    </li>
-                </ul>
             </section>
 
             <footer>
