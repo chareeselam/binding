@@ -3,6 +3,8 @@
     --dark-orange: #7d4b2c;
 }
 
+/* ------------ color changes ------------- */
+
 .terms,
 .ch-no,
 a:hover,
@@ -14,6 +16,14 @@ blockquote::before {
     border-color: var(--orange);
     background-color: var(--dark-orange);
 }
+
+.title-sig {
+    color: var(--dark-orange);
+    -webkit-text-stroke-color: var(--orange);
+}
+
+.highlight { background-color: var(--dark-orange); }
+
 
 .multi-temperature {
     display: flex;
@@ -30,7 +40,6 @@ blockquote::before {
     display: block;
     text-align: center;
 }
-
 
 /* ------------ grid ------------- */
 
@@ -203,23 +212,6 @@ blockquote::before {
     color: var(--orange);
 }
 
-.title-sig {
-    color: var(--dark-orange);
-    -webkit-text-stroke-color: var(--orange);
-}
-
-#nav-links a .interaction{
-    background-color: #7d4b2c;
-    border-color: #FB8C49;
-    color: #FB8C49;
-    justify-content: center;
-    align-items: center;
-    transition: color 0.3s ease-in-out;
-    border-radius: 20px;
-    border-style: solid;
-    border-width: 1.5px;
-}
-
 #chapter-no {
     padding-block: 0;
 }
@@ -233,3 +225,21 @@ blockquote::before {
 #interaction-title {
     padding-block-end: 1rem;
 }
+
+/* ------------ nav links ------------- */
+
+a.nav-link-home,
+a.nav-link-perception,
+a.nav-link-transition {
+    color: var(--white);
+    text-decoration: none;
+}
+
+a.nav-link-interaction {
+    color: var(--orange);
+}
+
+.nav-link-home:hover { color: var(--green); }
+.nav-link-perception:hover { color: var(--red); }
+.nav-link-interaction:hover { color: var(--orange); }
+.nav-link-transition:hover { color: var(--yellow); }

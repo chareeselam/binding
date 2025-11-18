@@ -17,7 +17,7 @@
     --yellow: #F9C823;
     --dark-yellow: #6b5b25;
     --green: #2E933C;
-    --dark-green: #0c4814;
+    --dark-green: #17381b;
 }
 
 html {scroll-behavior: smooth;}
@@ -42,8 +42,8 @@ header {
 
 .chapters{
     /* padding-block-start: 2rem; */
-    margin-block-start: 3rem;
-    margin-block-end: 6rem;
+    margin-block-start: 4rem;
+    margin-block-end: 8rem;
 }
 
 .layout {
@@ -251,6 +251,7 @@ blockquote::before {
     border-top: 1.5px solid var(--white);
     border-bottom: 1.5px solid var(--white);
     text-align: center;
+    color: var(--white);
 }
 
 .lines, .lines p {
@@ -292,6 +293,11 @@ blockquote .lines{
     -webkit-text-stroke-color: var(--green);
 }
 
+.highlight {
+    display: inline;
+    padding: 0 0.15em;
+}
+
 /* ------------ interaction ------------- */
 
 .interaction {
@@ -301,7 +307,7 @@ blockquote .lines{
   background: transparent;
 
   margin-inline: auto;
-  margin: 3rem;
+  margin-block: 3rem;
   align-self: center;
 }
 
@@ -431,5 +437,8 @@ img {
     .interaction {margin: 0;}
 
     p.nav-title {padding-block: var(--spacing);}
+
+    article .chapters:last-of-type { margin-block-end: 4rem; }
+
 }
 
