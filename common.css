@@ -136,6 +136,11 @@ p, small {
     font-weight: 700;
 }
 
+p.nav-title {
+    padding-block-start: var(--spacing);
+    padding-block-end: 0.2rem;
+}
+
 /* ------------ intro ------------- */
 
 .intro {
@@ -421,12 +426,10 @@ img {
         padding-block-start: var(--spacing);
     }
 
-    .meta {
-    grid-template-columns: 1fr 3fr;
-    }
+    .meta {grid-template-columns: 1fr 3fr;}
 
-    .interaction {
-        margin: 0;
-    }
+    .interaction {margin: 0;}
+
+    p.nav-title {padding-block: var(--spacing);}
 }
 
