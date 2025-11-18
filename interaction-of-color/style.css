@@ -219,3 +219,17 @@ blockquote::before {
     border-style: solid;
     border-width: 1.5px;
 }
+
+#chapter-no {
+    padding-block: 0;
+}
+
+#interaction-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#interaction-title {
+    padding-block-end: 1rem;
+}

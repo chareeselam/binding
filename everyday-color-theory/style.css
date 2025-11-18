@@ -13,7 +13,7 @@ blockquote::before {
 
 a,
 a:hover {
-    text-decoration-color: var(--dark-red);
+    text-decoration-color: var(--red);
 }
 
 .ch-no {

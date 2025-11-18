@@ -16,6 +16,8 @@
     --dark-orange: #7d4b2c;
     --yellow: #F9C823;
     --dark-yellow: #6b5b25;
+    --green: #2E933C;
+    --dark-green: #0c4814;
 }
 
 html {scroll-behavior: smooth;}
@@ -40,7 +42,8 @@ header {
 
 .chapters{
     /* padding-block-start: 2rem; */
-    margin-block-end: 4rem;
+    margin-block-start: 3rem;
+    margin-block-end: 6rem;
 }
 
 .layout {
@@ -50,8 +53,10 @@ header {
     padding: var(--spacing);
 }
 
-.chapters {
-    padding-block: 3rem;
+.layout-home {
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing);
 }
 
 /* ------------ text ------------- */
@@ -70,7 +75,7 @@ h2 {
     font-family: var(--heading-text);
     font-size: 1.8rem;
     color: var(--white);
-    margin-block-end: 3rem;
+    margin-block-end: 4rem;
 }
 
 h3 {
@@ -104,11 +109,11 @@ p, small {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1rem;
     border-bottom: 1.5px solid var(--white);
     padding-bottom: var(--spacing);
     font-family: var(--body-text);
     color: var(--white);
+    
 }
 
 #nav-links {
@@ -119,7 +124,7 @@ p, small {
 #nav-links a{
     height: 40px; 
     display: inline-flex;
-    align-items: space-between;
+    align-items: center;
     justify-content: space-between;
     cursor: pointer;
     font-size: 0.75rem;
@@ -127,7 +132,8 @@ p, small {
 }
 
 .nav-title {
-    padding-block: 0rem;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 /* ------------ intro ------------- */
@@ -135,38 +141,29 @@ p, small {
 .intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     padding-block: var(--spacing);
     /* background-color: #212121; */
     flex: 1 0 auto;
     /* position: relative; */
 }
 
-/* .intro::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 1.5px; 
-        background-color: var(--white);
-    } */
-
 .meta {
     display: grid;
-    margin-block: 2rem;
-    grid-template-columns: 2fr 2fr;
+    margin-block-end: var(--spacing);
+    gap: var(--spacing);
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-    "one one"
-    "two three";
+    "two three"
+    "one one";
 }
 
 .author { grid-area: two; }
 .date { grid-area: three; }
 .subtitle { 
     grid-area: one;
-    max-width: 80vw; }
+    max-width: 90vw; }
 
 
 .intro ul p {padding-block: 0.2rem;}
@@ -175,6 +172,13 @@ p, small {
     border-top: 1.5px solid var(--white);
     padding-block-start: var(--spacing);
     background-color: var(--background);
+}
+
+.meta-details {
+    font-family: var(--heading-text);
+    font-weight: 200;
+    font-size: 1rem;
+    padding: 0;
 }
 
 /* ------------ links ------------- */
@@ -192,7 +196,7 @@ a {
 blockquote {
     position: relative;
     margin-inline-start: 3rem;
-    margin-block: 4rem;
+    margin-block: 8rem;
     padding-inline-start: 2rem;
     color: var(--white);
     z-index: 1;
@@ -278,31 +282,36 @@ blockquote .lines{
     font-weight: 700;
 }
 
+.experience {
+    color: var(--dark-green);
+    -webkit-text-stroke-color: var(--green);
+}
+
 /* ------------ interaction ------------- */
 
 .interaction {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   background: transparent;
 
   margin-inline: auto;
-  margin-block: 3rem;
+  margin: 3rem;
   align-self: center;
 }
 
 .square {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   opacity: 0.7;
 }
 
 .red {
   background: var(--dark-red);
   border: 3px solid var(--red);
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
 
   animation: move-red 3s ease-in-out forwards;
 }
@@ -310,7 +319,7 @@ blockquote .lines{
 .yellow {
   background: var(--dark-yellow);
   border: 3px solid var(--yellow);
-  bottom: 0px;
+  bottom: 10px;
   right: 10px;
 
   animation: move-yellow 3s ease-in-out forwards;
@@ -345,10 +354,11 @@ img {
 
 /* ------------ media queries ------------- */
 
-@media (min-width: 750px) {
+@media (width>750px) {
+
     .layout {
         display: grid;
-        height: 100svh;
+        height: 100dvh;
         grid-template-columns: 1fr 1fr;
         grid-template-rows:
             auto
@@ -358,26 +368,36 @@ img {
             "nav nav"
             "intro content"
             "footer footer";
+        padding-block: var(--spacing);
     }
 
     #nav { 
         grid-area: nav;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-title {
+    padding-block: var(--spacing);
+    font-size: 1.2rem;
+    line-height: 1rem;
+    }
+
+    .intro {
+        grid-area: intro;
+        position: relative;
+        padding-inline-end: 2rem;
         justify-content: space-between;
     }
 
-    .intro   { grid-area: intro; }
     .content { 
         grid-area: content;
         overflow: auto;
     }
     #footer  {grid-area: footer;}
-
-    .intro {
-        position: relative;
-        padding-inline-end: 2rem;
-    }
 
     .intro::after {
         content: "";
@@ -393,6 +413,20 @@ img {
         padding-inline-start: 2rem;
         padding-inline-end: var(--spacing);
         padding-block: var(--spacing);
+    }
+
+    h1 {
+        font-size: 4.9rem;
+        line-height: 5.2rem;
+        padding-block-start: var(--spacing);
+    }
+
+    .meta {
+    grid-template-columns: 1fr 3fr;
+    }
+
+    .interaction {
+        margin: 0;
     }
 }
 
