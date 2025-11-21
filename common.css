@@ -223,6 +223,7 @@ blockquote {
     z-index: 1;
     font-family: var(--body-text);
     font-size: 1rem;
+    /* text-transform: uppercase; */
 }
 
 blockquote p {
@@ -232,6 +233,7 @@ blockquote p {
     font-family: var(--heading-text);
     font-size: 1.8rem;
     line-height: 2.5rem;
+    
 }
 
 blockquote::before {
@@ -243,6 +245,9 @@ blockquote::before {
     font-weight: 800;
     font-size: 3rem;
     line-height: 1;
+    letter-spacing: 0.3em;
+    paint-order: stroke fill;
+    -webkit-text-stroke-width: 0.25rem; 
 }
 
 /* ------------ section headings ------------- */
@@ -302,11 +307,6 @@ blockquote .lines{
 
 .bold {
     font-weight: 700;
-}
-
-.highlight {
-    display: inline;
-    padding: 0 0.15em;
 }
 
 /* ------------ interaction ------------- */

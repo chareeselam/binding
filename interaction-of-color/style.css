@@ -22,8 +22,10 @@ blockquote::before {
     -webkit-text-stroke-color: var(--orange);
 }
 
-.highlight { background-color: var(--dark-orange); }
-
+blockquote::before {
+    color: var(--dark-orange);
+    -webkit-text-stroke-color: var(--orange);
+}
 
 .multi-temperature {
     display: flex;

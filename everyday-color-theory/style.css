@@ -28,7 +28,10 @@ blockquote::before {
     -webkit-text-stroke-color: var(--red);
 }
 
-.highlight { background-color: var(--dark-red); }
+blockquote::before {
+    color: var(--dark-red);
+    -webkit-text-stroke-color: var(--red);
+}
 
 /* ------------ nav links ------------- */
 
