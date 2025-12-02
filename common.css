@@ -362,7 +362,7 @@ blockquote .lines{
   top: 0px;
   left: 0px;
 
-  animation: move-red 3s ease-in-out forwards;
+  animation: move-dark-orange 3s ease-in-out forwards;
 }
 
 .dark-orange {
@@ -371,16 +371,16 @@ blockquote .lines{
   bottom: 10px;
   right: 10px;
 
-  animation: move-yellow 3s ease-in-out forwards;
+  animation: move-light-orange 3s ease-in-out forwards;
 }
 
-@keyframes move-red {
+@keyframes move-dark-orange {
   to {
     transform: translate(60px, 60px);
   }
 }
 
-@keyframes move-yellow {
+@keyframes move-light-orange {
   to {
     transform: translate(-60px, -60px);
   }
@@ -467,7 +467,6 @@ img {
     h1 {
         font-size: 4.9rem;
         line-height: 5.2rem;
-        padding-block-start: var(--spacing);
     }
 
     .meta {grid-template-columns: 1fr 3fr;}
