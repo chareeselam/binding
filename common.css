@@ -356,18 +356,18 @@ blockquote .lines{
   opacity: 0.7;
 }
 
-.red {
-  background: var(--dark-red);
-  border: 3px solid var(--red);
+.light-orange {
+  background: #d1773b;
+  border: 3px solid #f9811f;
   top: 0px;
   left: 0px;
 
   animation: move-red 3s ease-in-out forwards;
 }
 
-.yellow {
-  background: var(--dark-yellow);
-  border: 3px solid var(--yellow);
+.dark-orange {
+  background: #C96A2D;
+  border: 3px solid #E96F28;
   bottom: 10px;
   right: 10px;
 
