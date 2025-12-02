@@ -7,9 +7,8 @@
 
     --white: #e9e9e9;
     --background: #212121;
-    /* --red: #FC506E;
-    --orange: #FB8C49;
-    --yellow: #F9C823; */
+
+    /* ------------ dark mode ------------- */
     --red: #FC506E;
     --dark-red: #6f303a;
     --orange: #FB8C49;
@@ -18,9 +17,89 @@
     --dark-yellow: #6b5b25;
     --green: #3B82F6;
     --dark-green: #17381b;
+
+    /* ------------ toggle colors dark mode------------- */
+    --toggle-track: #d6d6d6;
+    --toggle-track-active: #6e6e6e;
+    --toggle-thumb: var(--white);
+    --toggle-shadow: rgba(0,0,0,0.25);
 }
 
+html:has(#theme-toggle:checked) {
+    --background: #fdfaf5;
+    --white: #111111;
+
+    /* ------------ light mode colors ------------- */
+    --green: #3CB371;
+    --light-green: #D8F3E6;
+    --blue: #3B82F6;
+    --light-blue: #DBEAFE;
+    --purple: #A855F7;
+    --light-purple: #F3E8FF;
+
+    /* ------------ color mapping ------------- */
+    --red: var(--purple);
+    --dark-red: var(--light-purple);
+    --orange: var(--blue);
+    --dark-orange: var(--light-blue);
+    --yellow: var(--green);
+    --dark-yellow: var(--light-green);
+
+    /* ------------ toggle colors light mode ------------- */
+    --toggle-track: var(--blue);
+    --toggle-track-active: var(--light-blue);
+    --toggle-thumb: var(--blue);
+    --toggle-shadow: rgba(0,0,0,0.22);
+}
+
+
 html {scroll-behavior: smooth;}
+
+/* ------------ dark/light mode toggle ------------- */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: var(--toggle-track);
+    border-radius: 999px;
+    transition: background 0.25s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 2px;
+    top: 2px;
+    background: var(--toggle-thumb);
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+    box-shadow: 0 3px 8px var(--toggle-shadow);
+}
+
+.switch input:checked + .slider {
+    background: var(--toggle-track-active);
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
 
 /* ------------ layout ------------- */
 
@@ -57,6 +136,13 @@ header {
     display: flex;
     flex-direction: column;
     padding: var(--spacing);
+}
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing);
+    align-items: center;
 }
 
 /* ------------ text ------------- */
@@ -452,4 +538,3 @@ img {
     article .chapters:last-of-type { margin-block-end: 4rem; }
 
 }
-
