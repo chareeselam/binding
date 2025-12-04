@@ -407,7 +407,14 @@ blockquote .lines{
 
 /* ------------ media queries ------------- */
 
-@media (min-width:1150px) {
+@media (min-width: 750px) {
+    
+    #nav-links a {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 1150px) {
 
     .layout {
         display: grid;

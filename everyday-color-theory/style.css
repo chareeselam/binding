@@ -16,7 +16,6 @@ a:hover {
 a:hover,
 blockquote::before,
 a.nav-link-perception,
-.title-sig,
 .nav-link-perception:hover {
     color: var(--red);
 }
@@ -26,7 +25,10 @@ a.nav-link-perception,
     background-color: var(--dark-red);
 }
 
-.title-sig { -webkit-text-stroke-color: var(--red); }
+.title-sig { 
+    -webkit-text-stroke-color: var(--red); 
+    color: var(--dark-red);
+}
 
 blockquote::before {
     color: var(--dark-red);
