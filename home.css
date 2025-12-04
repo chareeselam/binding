@@ -154,7 +154,7 @@ h2 {
 
 .running-track {
     display: inline-flex;
-    animation: marquee 10s linear infinite;
+    animation: marquee 12s linear infinite;
 }
 
 .running-text {

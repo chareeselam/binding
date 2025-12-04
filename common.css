@@ -388,22 +388,28 @@ blockquote .lines{
 
 
 .yellow-circle {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     /* margin: auto; */
     border-radius: 50%;
     border: 3px solid var(--yellow);
     background: radial-gradient(circle, var(--dark-yellow) 20%, transparent 80%);
+    animation: pulse-fill 4.5s ease-in-out 1 forwards;
 }
 
-/* ------------ perception ------------- */
+@keyframes pulse-fill {
+    0% {
+        background: radial-gradient(circle, var(--dark-yellow) 15%, transparent 80%);
+    }
+    
+    50% {
+        background: radial-gradient(circle, var(--dark-yellow) 25%, transparent 80%);
+    }
 
-/* .penrose-triangle {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-inline: auto;
-} */
+    100% {
+        background: radial-gradient(circle, var(--dark-yellow) 35%, transparent 80%);
+    }
+}
 
 /* ------------ media queries ------------- */
 
@@ -476,11 +482,3 @@ blockquote .lines{
 
     article .chapters:last-of-type { margin-block-end: 4rem; }
 }
-
-/* @media (width>1400px) {
-
-    h1 {
-        font-size: 4.5rem;
-        line-height: 5.2rem;
-    }
-} */
