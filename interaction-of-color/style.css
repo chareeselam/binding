@@ -8,7 +8,8 @@
 .terms,
 .ch-no,
 a:hover,
-blockquote::before {
+blockquote::before,
+a.nav-link-interaction {
     color: var(--orange);
 }
 
@@ -26,6 +27,19 @@ blockquote::before {
     color: var(--dark-orange);
     -webkit-text-stroke-color: var(--orange);
 }
+
+/* ------------ nav links ------------- */
+
+
+a.nav-link-home,
+a.nav-link-perception,
+a.nav-link-transition {
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* ------------ diagrams ------------- */
+/* ------------ multi-temp ------------- */
 
 .multi-temperature {
     display: flex;
@@ -227,22 +241,3 @@ blockquote::before {
 #interaction-title {
     padding-block-end: 1rem;
 }
-
-/* ------------ nav links ------------- */
-
-
-a.nav-link-home,
-a.nav-link-perception,
-a.nav-link-transition {
-    color: var(--white);
-    text-decoration: none;
-}
-
-a.nav-link-interaction {
-    color: var(--orange);
-}
-
-.nav-link-home:hover { color: var(--green); }
-.nav-link-perception:hover { color: var(--red); }
-.nav-link-interaction:hover { color: var(--orange); }
-.nav-link-transition:hover { color: var(--yellow); }

@@ -169,6 +169,11 @@ p, small {
     text-decoration: none;
 }
 
+.nav-link-home:hover { color: var(--green); }
+.nav-link-perception:hover { color: var(--red); }
+.nav-link-interaction:hover { color: var(--orange); }
+.nav-link-transition:hover { color: var(--yellow); }
+
 /* ------------ intro ------------- */
 
 .intro {
@@ -311,9 +316,9 @@ blockquote .lines{
 
 .bold { font-weight: 700; }
 
-/* ------------ interaction ------------- */
+/* ------------ shape frame ------------- */
 
-.interaction {
+.shape {
     position: relative;
     width: 160px;
     aspect-ratio: 1 / 1;
@@ -323,7 +328,12 @@ blockquote .lines{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* ------------ penrose triangle ------------- */
 
 .penrose-triangle {
     display: block;
@@ -380,6 +390,7 @@ blockquote .lines{
 .yellow-circle {
     width: 100%;
     height: 100%;
+    /* margin: auto; */
     border-radius: 50%;
     border: 3px solid var(--yellow);
     background: radial-gradient(circle, var(--dark-yellow) 20%, transparent 80%);
@@ -396,7 +407,7 @@ blockquote .lines{
 
 /* ------------ media queries ------------- */
 
-@media (width>1150px) {
+@media (min-width:1150px) {
 
     .layout {
         display: grid;
@@ -454,7 +465,7 @@ blockquote .lines{
 
     .meta {grid-template-columns: 1fr 3fr;}
 
-    .interaction {margin: 0;}
+    .shape {margin: 0;}
 
     article .chapters:last-of-type { margin-block-end: 4rem; }
 }

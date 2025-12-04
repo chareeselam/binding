@@ -15,8 +15,22 @@ html {scroll-behavior: smooth;}
 h1.nav-title {
     margin-block: 10rem;
     font-size: 3rem;
-    text-align: center;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
 }
+
+
+.title-left, 
+.title-right {
+    display: block;
+    text-transform: uppercase;
+}
+
+.title-left { text-align: start; }
+.title-right { text-align: end; }
+
 
 h2 {
     font-size: 2.5rem;
@@ -25,11 +39,6 @@ h2 {
     padding-block: 2rem;
     color: var(--white);
     text-transform: uppercase;
-}
-
-h2.colophon {
-    margin-block-end: 0;
-    margin-block-start: 2rem;
 }
 
 .experience {
@@ -67,13 +76,11 @@ h2.colophon {
     padding: 0;
     margin: 0;
     flex: 1;
-    list-style: none;   
+    list-style: none;
 }
 
 .article-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    display: block;
     padding-inline: 1.5rem;
     padding-block: 3rem;
     border: 1.5px solid var(--white);
@@ -101,6 +108,27 @@ h2.colophon {
     background-color: var(--dark-yellow);   
 }
 
+/* ------------ interaction card hover squares animation ------------- */
+
+#nav-links-home a.interaction-card:hover .square-1 {
+    animation: move-square-1-hover 3s ease-in-out forwards;
+}
+
+#nav-links-home a.interaction-card:hover .square-2 {
+    animation: move-square-2-hover 3s ease-in-out forwards;
+}
+
+@keyframes move-square-1-hover {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(-30px, -30px); }
+}
+
+@keyframes move-square-2-hover {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(30px, 30px); }
+}
+
+
 /* ------------ intro ------------- */
 
 .meta-home {
@@ -109,13 +137,9 @@ h2.colophon {
     gap: 0;
 }
 
-.meta-home h2 {
-    margin:0;
-}
+.meta-home h2 { margin:0; }
 
-.meta-home .terms {
-    padding: 0;
-}
+.meta-home .terms { padding: 0; }
 
 /* ------------ running text ------------- */
 
@@ -149,27 +173,118 @@ h2.colophon {
     }
 }
 
+/* ------------ colophon ------------- */
+
+.colophon {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block: 4rem;
+}
+
+h2.colophon-title {
+    padding-block-end: 0;
+    margin-block-end: 0;
+    margin-block-start: 2rem;
+}
+
+/* ------------ image ------------- */
+
+img {
+    width: 260px;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    margin-block: 3rem;
+    /* margin-block-end: var(--spacing); */
+}
 
 /* ------------ media queries ------------- */
 
-@media (width > 750px) {
+@media (min-width:750px) {
 
     h1.nav-title {
         margin-block: 14rem;
         font-size: 6rem;
-        text-align: center;
         line-height: 1em;
     }
 
     .article-card {
+        display: flex;
         flex-direction: row;
-        align-items: start;
-        gap: 2rem;
+        align-items: center;
+        gap: var(--spacing);
+        padding-block: 2.5rem;
+        padding-inline: 3rem;
     }
 
+    .shape {
+        flex: 0 0 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .square {
+        width: 130px;
+        height: 130px;
+}
+
     .meta-home {
+        flex: 1;
         margin-inline-start: 2rem;
+    }
+
+    .colophon {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 6rem;
+        margin-inline: auto;
+    }
+
+    .colophon-left {
+        flex: 0 0 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+        padding-inline-start: var(--spacing);
+    }
+
+    img {
+        margin-inline: auto;
+        width: 260px;
+    }
+
+    .colophon-right { max-inline-size: 90ch; }
+
+    .colophon-right p { margin: 0; }
+
+    .meta-home h2 {
+        font-size: 3.2rem;
+        line-height: 3.3rem;
+    }
+
+    h2.colophon-title {
+        margin-block-start: 0;
+        padding-block-start: 1.5rem;
     }
 }
 
+@media (min-width:950px) {
+
+    h1.nav-title { font-size: 7rem; }
+
+    .meta-home h2 {
+        font-size: 4.5rem;
+        line-height: 4.6rem;
+    }
+
+    .article-card {
+        gap: 2rem;
+        padding-block: 3rem;
+        padding-inline: 3rem;
+    }
+
+}
 
