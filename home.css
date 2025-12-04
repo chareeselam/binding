@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-:root {
-    --spacing: 1rem;
-
-    --white: #FFFFFF;
-    --background: #212121;
-    --red: #FC506E;
-    --dark-red: #6f303a;
-    --orange: #FB8C49;
-    --dark-orange: #7d4b2c;
-    --yellow: #F9C823;
-    --dark-yellow: #6b5b25;
-    --green: #3B82F6;
-    --dark-green: #224172;
-}
-
 html {scroll-behavior: smooth;}
 
 /* ------------ layout ------------- */
@@ -27,6 +12,12 @@ html {scroll-behavior: smooth;}
 
 /* ------------ type ------------- */
 
+h1.nav-title {
+    margin-block: 10rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
 h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -36,9 +27,14 @@ h2 {
     text-transform: uppercase;
 }
 
+h2.colophon {
+    margin-block-end: 0;
+    margin-block-start: 2rem;
+}
+
 .experience {
-    color: var(--dark-green);
-    -webkit-text-stroke-color: var(--green);
+    color: var(--dark-red);
+    -webkit-text-stroke-color: var(--red);
 }
 
 .color-theory {
@@ -68,51 +64,40 @@ h2 {
 #nav-links-home {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing);
     padding: 0;
-    flex: 1;   
+    margin: 0;
+    flex: 1;
+    list-style: none;   
 }
 
-#nav-links-home a {
-    display: block;
+.article-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     padding-inline: 1.5rem;
     padding-block: 3rem;
-    border: 1.5px solid var(--white);
-    text-decoration: none;
-    color: var(--white);
-}   
-  
-#nav-links-home li a {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-.article-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding-inline: 1.5rem;
-    padding-block: 2rem;
     border: 1.5px solid var(--white);
     text-decoration: none;
     color: var(--white);
     box-sizing: border-box;
 }
 
+.interaction-card {
+    border-block-start: 0;
+    border-block-end: 0;
+}
+
+/* ------------ card hover states ------------- */
 
 #nav-links-home a.perception-card:hover {
-    border: 1.5px solid var(--red);
     background-color: var(--dark-red);    
 }
 
 #nav-links-home a.interaction-card:hover {
-    border: 1.5px solid var(--orange);
     background-color: var(--dark-orange);    
 }
 
 #nav-links-home a.transition-card:hover {
-    border: 1.5px solid var(--yellow);
     background-color: var(--dark-yellow);   
 }
 
@@ -132,35 +117,59 @@ h2 {
     padding: 0;
 }
 
+/* ------------ running text ------------- */
+
+.running-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    border-block-start: 1.5px solid var(--white);
+    border-block-end: 1.5px solid var(--white);
+    margin-block: var(--spacing);
+}
+
+.running-track {
+    display: inline-flex;
+    animation: marquee 10s linear infinite;
+}
+
+.running-text {
+    display: inline-block;
+    padding-inline: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-block: 0.4em;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
 /* ------------ media queries ------------- */
 
 @media (width > 750px) {
 
-    #nav-home {
-        width: 100%;
-        align-items: stretch;
+    h1.nav-title {
+        margin-block: 14rem;
+        font-size: 6rem;
+        text-align: center;
+        line-height: 1em;
     }
 
-    #nav-links-home {
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            gap: 2rem;
-            margin-block: 4rem;
-            flex: 1;    
+    .article-card {
+        flex-direction: row;
+        align-items: start;
+        gap: 2rem;
     }
 
-    #nav-links-home li {
-            flex: 1;
-            display: flex;
+    .meta-home {
+        margin-inline-start: 2rem;
     }
-
-    #nav-links-home li a {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-    }
-
 }
 
 
