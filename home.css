@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+:root {
+    --experience-fill-dark: #1f4a99;       /* blue */
+    --experience-stroke-dark: #3B82F6;     /* darker blue */
+    --experience-fill-light: #FDC9D3;      /* red */
+    --experience-stroke-light: #FC506E;    /* lighter red */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --experience-fill-dark: var(--experience-fill-light);
+    --experience-stroke-dark: var(--experience-stroke-light);
+  }
+}
+
 html {scroll-behavior: smooth;}
 
 /* ------------ layout ------------- */
@@ -42,8 +56,8 @@ h2 {
 }
 
 .experience {
-    color: var(--dark-red);
-    -webkit-text-stroke-color: var(--red);
+    color: var(--experience-fill-dark);
+    -webkit-text-stroke-color: var(--experience-stroke-dark);
 }
 
 .color-theory {
@@ -214,7 +228,6 @@ img {
     display: block;
     margin-inline: auto;
     margin-block: 3rem;
-    /* margin-block-end: var(--spacing); */
 }
 
 /* ------------ media queries ------------- */

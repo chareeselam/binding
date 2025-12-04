@@ -18,19 +18,6 @@
     --yellow: #F9C823;
     --dark-yellow: #6b5b25;
     --darker-yellow: #4a3c19;
-
-    --penrose-stroke: #c5465b;
-    --penrose-fill-1: #631f2e;
-    --penrose-fill-2: #772a3b;
-    --penrose-fill-3: #6c2434;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --white: #1e1e1e;
-    --background: #fdfaf5;
-
-    /* ------------ light mode colors ------------- */
     --green: #3CB371;
     --light-green: #D8F3E6;
     --lighter-green: #ECF9F3;
@@ -41,6 +28,21 @@
     --light-purple: #dcc8f1;
     --lighter-purple: #FAF4FF;
 
+    /* ------------ penrose dark mode ------------- */
+    --penrose-stroke: #c5465b;
+    --penrose-fill-1: #631f2e;
+    --penrose-fill-2: #772a3b;
+    --penrose-fill-3: #6c2434;
+
+    --home-hover: #3B82F6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --white: #1e1e1e;
+    --background: #fdfaf5;
+
+    /* ------------ penrose light mode ------------- */
     --penrose-stroke: #14532d;
     --penrose-fill-1: #A3EAC2;
     --penrose-fill-2: #B9F0D1;
@@ -56,6 +58,8 @@
     --yellow: var(--purple);
     --dark-yellow: var(--light-purple);
     --darker-yellow: var(--lighter-purple);
+
+    --home-hover: #FC506E;
   }
 }
 
@@ -152,7 +156,8 @@ p, small {
 
 /* ------------ navigation ------------- */
 
-#nav {
+#nav,
+#nav-end {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -161,6 +166,8 @@ p, small {
     font-family: var(--body-text);
     color: var(--white);
 }
+
+#nav-end { border-block-end: 0; }
 
 #nav-links {
     display: flex;
@@ -178,10 +185,10 @@ p, small {
     text-decoration: none;
 }
 
-.nav-link-home:hover { color: var(--green); }
-.nav-link-perception:hover { color: var(--red); }
-.nav-link-interaction:hover { color: var(--orange); }
-.nav-link-transition:hover { color: var(--yellow); }
+#nav-links a.nav-link-home:hover { color: var(--home-hover); }
+#nav-links .nav-link-perception:hover { color: var(--red); }
+#nav-links .nav-link-interaction:hover { color: var(--orange); }
+#nav-links .nav-link-transition:hover { color: var(--yellow); }
 
 /* ------------ intro ------------- */
 
@@ -190,7 +197,7 @@ p, small {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-block: var(--spacing);
+    padding-block: 2rem;
     flex: 1 0 auto;
     border-bottom: 1.5px solid var(--white);
 }
@@ -213,7 +220,7 @@ p, small {
 
 .subtitle { 
     grid-area: one;
-    max-width: 90vw; 
+    max-inline-size: 90vw; 
 }
 
 .intro ul p { padding-block: 0.2rem; }
@@ -229,6 +236,11 @@ p, small {
     font-weight: 200;
     font-size: 1rem;
     padding: 0;
+}
+
+.content { 
+    padding-block-start: 4rem;
+    padding-block-end: var(--spacing);
 }
 
 /* ------------ links ------------- */
@@ -252,6 +264,7 @@ blockquote {
     z-index: 1;
     font-family: var(--body-text);
     font-size: 1rem;
+    line-height: 1.9rem;
 }
 
 blockquote p {
@@ -260,8 +273,7 @@ blockquote p {
     padding-block: 2rem;
     font-family: var(--heading-text);
     font-size: 1.8rem;
-    line-height: 2.5rem;
-    
+    line-height: 2.5rem; 
 }
 
 blockquote::before {
@@ -332,7 +344,7 @@ blockquote .lines{
 
 .shape {
     position: relative;
-    width: 160px;
+    width: 180px;
     aspect-ratio: 1 / 1;
     background: transparent;
     margin-inline: auto;
@@ -349,7 +361,7 @@ blockquote .lines{
 
 .penrose-triangle {
     display: block;
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-inline: auto;
 }
@@ -367,8 +379,8 @@ blockquote .lines{
 
 .square {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     opacity: 0.7;
     inset: 0;
     margin: auto;
@@ -397,8 +409,8 @@ blockquote .lines{
 }
 
 .yellow-circle {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: 3px solid var(--yellow);
     background: radial-gradient(circle, var(--dark-yellow) 20%, transparent 80%);
@@ -424,6 +436,16 @@ blockquote .lines{
     }
 }
 
+@media (min-width: 725px) and (max-width: 1149px) {
+    
+    .intro-text-group,
+    .content > * {
+        max-inline-size: 90ch;
+        margin-inline: auto;
+        text-align: left;
+    }
+}
+
 @media (min-width: 1150px) {
 
     .layout {
@@ -439,6 +461,7 @@ blockquote .lines{
             "intro content"
             "footer footer";
         padding-block: var(--spacing);
+        box-sizing: border-box;
     }
 
     #nav { 
@@ -449,13 +472,18 @@ blockquote .lines{
         padding-block-end: var(--spacing);
     }
 
+    #nav-end {
+        display: none;
+    }
+
     .intro {
         grid-area: intro;
         padding-inline-end: 2rem;
-        display: flex;
+        display: grid;
+        grid-template-rows: 
+            1fr
+            auto;
         flex-direction: column;
-        justify-content: space-between;
-
         border-block-end: none;
         border-inline-end: 1.5px solid var(--white);
     }
@@ -485,6 +513,8 @@ blockquote .lines{
     section.intro .shape {
         transform: scale(1.25);
         transform-origin: center;
+        align-self: center;
+        justify-self: center;
     }
 
     .meta {grid-template-columns: 2fr 3fr;}
@@ -496,3 +526,17 @@ blockquote .lines{
 
     article .chapters:last-of-type { margin-block-end: 4rem; }
 }
+
+/* 
+@media (min-width: 1500px) {
+
+    .square {
+        width: 150px;
+        height: 150px;
+    }
+
+    section.intro .shape {
+        transform: scale(1.5);
+        transform-origin: center;
+    }
+} */

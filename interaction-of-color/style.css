@@ -223,9 +223,9 @@ a.nav-link-transition {
     color: var(--orange);
 }
 
-#chapter-no {
+/* #chapter-no {
     padding-block: 0;
-}
+} */
 
 #interaction-meta {
     display: flex;
@@ -233,6 +233,16 @@ a.nav-link-transition {
     gap: 0;
 }
 
-#interaction-title {
-    padding-block-end: 1rem;
+#interaction-meta {
+    display: grid;
+    margin-block-end: var(--spacing);
+    gap: var(--spacing);
+    grid-template-columns: auto auto 1fr;
+    column-gap: 2rem;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "two three four"
+    "one one one";
 }
+
+#chapter { grid-area: four; }
