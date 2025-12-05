@@ -1,3 +1,17 @@
+:root {
+    --warm:    #fb7e49;
+    --lukewarm:#FB8C49;
+    --cold:    #fb9f49;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --warm:    #5A75E0;
+    --lukewarm:#4C90EF;
+    --cold:    #25A4FF;
+  }
+}
+
 /* ------------ color changes ------------- */
 
 .terms,
@@ -22,6 +36,10 @@ blockquote::before {
     color: var(--dark-orange);
     -webkit-text-stroke-color: var(--orange);
 }
+
+.warm { color: var(--warm); }
+.lukewarm { color: var(--lukewarm); }
+.cold { color: var(--cold); }
 
 /* ------------ nav links ------------- */
 

@@ -26,15 +26,14 @@
     --light-blue: #DBEAFE;
     --lighter-blue: #EEF5FF;
     --purple: #A855F7;
-    /* --desaturated-purple:  */
     --light-purple: #d9cae9;
     --lighter-purple: #FAF4FF;
 
     /* ------------ penrose dark mode ------------- */
     --penrose-stroke: #aa3044;
-    --penrose-fill-1: #631f2ee5;
-    --penrose-fill-2: #772a3bd5;
-    --penrose-fill-3: #6c2434da;
+    --penrose-fill-1: #5A2731;
+    --penrose-fill-2: #70303C;
+    --penrose-fill-3: #472228;
 
     --home-hover: #3B82F6;
 }
