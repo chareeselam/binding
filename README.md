@@ -3,7 +3,7 @@
 A study of color through perception, interaction, and transition.
 
 ## Overview
-**Binding** is a web-based project built with HTML and CSS in response to three texts that explore color as an experience. The site translates typographic ideas into interactive systems, examining how color shapes the way we perceive, compare, and understand the world around us.
+**Binding** is a web-based project built with HTML and CSS in response to three texts that explore color as an experience. The site translates conceptual ideas about color into an interactive system, exploring how color influences the way we perceive, compare, and interpret information.
 
 ## Context
 
@@ -86,12 +86,13 @@ Designing a consistent, responsive system across multiple breakpoints came with 
   * Large, side-by-side intro sections introduced visual weight; desaturating colors helped maintain readability and flow.
 
 * **Recreating Albers-inspired illustrations**
-  * Translating Interaction of Color diagrams into pure CSS required careful layering, spacing, and motion.
+  * Translating Interaction of Color diagrams into pure CSS required careful layering and spacing.
 
 * **Building mobile-first, then scaling upward**
   * Aligning grids, consistent spacing, and text flow meant constant refinement across small, medium, and large breakpoints.
 
 ## Technical Features
+
 ### HTML + CSS Architecture
 
 * Semantic HTML for clear structure and accessibility
