@@ -68,12 +68,7 @@
 
 /* ------------ layout ------------- */
 
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background);
-    min-height: 100dvh;
-}
+body { background-color: var(--background); }
 
 main {
     display: flex;
@@ -94,19 +89,6 @@ header {
     display: flex;
     flex-direction: column;
     padding: var(--spacing);
-}
-
-.layout-home {
-    display: flex;
-    flex-direction: column;
-    padding: var(--spacing);
-}
-
-.toggle {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing);
-    align-items: center;
 }
 
 /* ------------ text ------------- */
@@ -194,11 +176,6 @@ p, small {
     font-size: 0.75rem;
     text-decoration: none;
 }
-
-#nav-links a.nav-link-home:hover { color: var(--home-hover); }
-#nav-links .nav-link-perception:hover { color: var(--red); }
-#nav-links .nav-link-interaction:hover { color: var(--orange); }
-#nav-links .nav-link-transition:hover { color: var(--yellow); }
 
 /* ------------ intro ------------- */
 
@@ -363,9 +340,6 @@ blockquote .lines{
     display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* ------------ penrose triangle ------------- */
@@ -434,14 +408,13 @@ blockquote .lines{
 }
 
 @media (min-width: 750px) {
-    
-    #nav-links a {
+    #nav-links a,
+    #footer small {
         font-size: 0.85rem;
     }
 }
 
 @media (min-width: 725px) and (max-width: 1149px) {
-    
     .intro-text-group,
     .content > * {
         max-inline-size: 90ch;
@@ -451,7 +424,6 @@ blockquote .lines{
 }
 
 @media (min-width: 1150px) {
-
     .layout {
         display: grid;
         height: 100dvh;
@@ -531,15 +503,3 @@ blockquote .lines{
     .chapters:first-of-type { margin-block-start: 0; }
     .chapters:last-of-type  { margin-block-end: 4rem; }
 }
-
-/* @media (min-width: 1520px) {
-    
-    .layout {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .content > article {
-        width: clamp(60ch, 60% + 10vw, 90ch);
-        margin-inline: auto;
-    }
-} */

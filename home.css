@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 :root {
     --experience-fill-dark: #173c82;
     --experience-stroke-dark: #3B82F6;
@@ -101,6 +99,11 @@ h2 {
     flex: 1;
     list-style: none;
 }
+
+.nav-link-home:hover { color: var(--home-hover); }
+.nav-link-perception:hover { color: var(--red); }
+.nav-link-interaction:hover { color: var(--orange); }
+.nav-link-transition:hover { color: var(--yellow); }
 
 .article-card {
     display: block;
