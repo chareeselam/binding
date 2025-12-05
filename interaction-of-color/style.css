@@ -245,10 +245,6 @@ a.nav-link-transition {
     color: var(--orange);
 }
 
-/* #chapter-no {
-    padding-block: 0;
-} */
-
 #interaction-meta {
     display: flex;
     flex-direction: column;
