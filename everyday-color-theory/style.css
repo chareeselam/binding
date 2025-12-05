@@ -38,26 +38,13 @@ a.nav-link-transition {
     text-decoration: none;
 }
 
-.nav-link-home:hover { color: var(--green); }
+.nav-link-home:hover { color: var(--home-hover); }
 .nav-link-interaction:hover { color: var(--orange); }
 .nav-link-transition:hover { color: var(--yellow); }
 
+#invisible { color: #848484; }
 
-/* ------------ header ------------- */
+@media (prefers-color-scheme: light) {
 
-.short-header {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "one one"
-    "two three";
+    #invisible { color: #b2b2b2; }
 }
-
-.short-header p { padding-block: 0.2rem; }
-
-.subtitle { grid-area: one; }
-.author { grid-area: two; }
-.date { grid-area: three; }
-
-#invisible { color: #7c7c7c; }

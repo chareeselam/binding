@@ -33,6 +33,10 @@ a.nav-link-transition {
     text-decoration: none;
 }
 
+.nav-link-home:hover { color: var(--home-hover); }
+.nav-link-perception:hover { color: var(--red); }
+.nav-link-transition:hover { color: var(--yellow); }
+
 /* ---------------- diagrams -----------------*/
 /* ------------ multi-temp ------------- */
 

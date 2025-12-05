@@ -24,15 +24,23 @@ html {scroll-behavior: smooth;}
     padding: var(--spacing);
 }
 
+#landing {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-block-end: 4rem; */
+}
+
 /* ------------ type ------------- */
 
 h1.nav-title {
-    margin-block: 10rem;
+    /* margin-block: 0; */
     font-size: 3rem;
     line-height: 1.2;
     display: flex;
     flex-direction: column;
-    /* gap: var(--spacing); */
+    flex: 1 auto 1;
 }
 
 
@@ -82,6 +90,7 @@ h2 {
     flex-direction: column;
     flex: 1;
     width: 100%;
+    margin-block-start: 2rem;
 }
 
 #nav-links-home {
@@ -172,7 +181,8 @@ h2 {
     white-space: nowrap;
     border-block-start: 1.5px solid var(--white);
     border-block-end: 1.5px solid var(--white);
-    margin-block-end: 6rem;
+    margin-block-end: 2rem;
+    /* margin-block-end: 6rem; */
 }
 
 
@@ -234,12 +244,14 @@ img {
 
 @media (min-width:500px) {
     h1.nav-title { font-size: 4rem; }
+
+    .colophon { margin-block: 8rem; }
 }
 
 @media (min-width:750px) {
 
     h1.nav-title {
-        margin-block: 14rem;
+        /* margin-block: 14rem; */
         font-size: 6rem;
         line-height: 1em;
     }
@@ -270,28 +282,6 @@ img {
         margin-inline-start: 2rem;
     }
 
-    .colophon {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 6rem;
-        margin-inline: auto;
-    }
-
-    .colophon-left {
-        gap: 1.5rem;
-        align-items: flex-start;
-        padding-inline-start: var(--spacing);
-    }
-
-    img {
-        margin-inline: auto;
-        width: 260px;
-    }
-
-    .colophon-right { max-inline-size: 90ch; }
-
-    .colophon-right p { margin: 0; }
-
     .meta-home h2 {
         font-size: 3.2rem;
         line-height: 3.3rem;
@@ -301,6 +291,14 @@ img {
         margin-block-start: 0;
         padding-block-start: 1.5rem;
     }
+
+    img {
+        margin-inline: auto;
+        width: 260px;
+    }
+
+    .colophon { margin-inline: auto; }
+    .colophon-right { max-inline-size: 80ch; }
 }
 
 @media (min-width:950px) {
@@ -317,6 +315,29 @@ img {
         padding-block: 3rem;
         padding-inline: 3rem;
     }
+
+    .colophon {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 6rem;
+        margin-inline: auto;
+        margin-block: 10rem;
+    }
+
+    .colophon-left {
+        gap: 1.5rem;
+        align-items: flex-start;
+        padding-inline-start: var(--spacing);
+    }
+
+    img {
+        margin-inline: auto;
+        width: 260px;
+    }
+
+    .colophon-right { max-inline-size: 90ch; }
+
+    .colophon-right p { margin: 0; }
 
 }
 

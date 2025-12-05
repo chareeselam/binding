@@ -33,6 +33,6 @@ a.nav-link-interaction {
     text-decoration: none;
 }
 
-.nav-link-home:hover { color: var(--green); }
+.nav-link-home:hover { color: var(--home-hover); }
 .nav-link-perception:hover { color: var(--red); }
 .nav-link-interaction:hover { color: var(--orange); }
